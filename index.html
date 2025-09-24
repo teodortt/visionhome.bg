@@ -948,7 +948,7 @@
             </div>
           </div>
           <div class="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5">
-            <h2 class="footer-heading">Request A Quote</h2>
+            <h2 class="footer-heading">Направете запитване</h2>
             <form id="contactForm" class="contact-form">
               <div class="form-group">
                 <input
@@ -976,7 +976,7 @@
                   cols="30"
                   rows="3"
                   class="form-control"
-                  placeholder="Запитване..."
+                  placeholder="Съобщение"
                   required
                 ></textarea>
               </div>
@@ -984,7 +984,7 @@
                 <button
                   id="submitBtn"
                   type="submit"
-                  class="form-control submit px-3"
+                  class="form-control submit px-3 btn btn-primary"
                 >
                   Изпрати
                 </button>
@@ -1041,41 +1041,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
-    <script>
-      const form = document.getElementById("contactForm");
-      const submitBtn = document.getElementById("submitBtn");
-      const successMsg = document.getElementById("successMsg");
-
-      form.addEventListener("submit", async function (e) {
-        e.preventDefault();
-
-        submitBtn.disabled = true;
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = "Изпращане...";
-
-        try {
-          const response = await fetch(
-            "https://script.google.com/macros/s/AKfycbzktgBs5vOO3NZGvJInKYMr7GG8h_cMMS8FO3t70KsKPyjDKfRRxqivGwtFSq9tSkrQ/exec",
-            {
-              method: "POST",
-              body: new URLSearchParams(new FormData(form)),
-            }
-          );
-
-          if (response.ok) {
-            successMsg.style.display = "block";
-            form.reset();
-          } else {
-            alert("Неуспешно изпращане. Моля, опитайте отново.");
-          }
-        } catch (err) {
-          alert("Грешка при изпращане на формуляра. Проверете връзката си.");
-          console.error(err);
-        } finally {
-          submitBtn.disabled = false;
-          submitBtn.textContent = originalText;
-        }
-      });
-    </script>
+    <script src="js/custom.js"></script>
   </body>
 </html>
