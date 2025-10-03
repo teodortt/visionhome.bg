@@ -1167,71 +1167,53 @@
           <!-- Дясна колона – форма -->
           <div class="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5">
             <h2 class="footer-heading">Заяви оферта</h2>
-            <form
-              action="/send-quote"
-              method="post"
-              class="contact-form"
-              novalidate
-            >
+            <form id="contactForm" class="contact-form">
               <div class="form-group">
-                <label for="q-name" class="sr-only">Име</label>
                 <input
-                  type="text"
-                  id="q-name"
                   name="name"
+                  type="text"
                   class="form-control"
-                  placeholder="Вашето име *"
+                  placeholder="Вашето име"
                   required
                 />
               </div>
               <div class="form-group">
-                <label for="q-email" class="sr-only">Имейл</label>
                 <input
-                  type="email"
-                  id="q-email"
                   name="email"
+                  type="email"
                   class="form-control"
-                  placeholder="Имейл *"
+                  placeholder="Имейл"
                   required
                 />
-              </div>
-              <div class="form-group">
-                <label for="q-phone" class="sr-only">Телефон</label>
-                <input
-                  type="tel"
-                  id="q-phone"
-                  name="phone"
-                  class="form-control"
-                  placeholder="Телефонен номер"
-                />
-              </div>
-              <div class="form-group">
-                <label for="q-message" class="sr-only">Съобщение</label>
-                <textarea
-                  id="q-message"
-                  name="message"
-                  cols="30"
-                  rows="4"
-                  class="form-control"
-                  placeholder="Вашето запитване *"
-                  required
-                ></textarea>
               </div>
 
               <div class="form-group">
+                <textarea
+                  name="message"
+                  id=""
+                  cols="30"
+                  rows="3"
+                  class="form-control"
+                  placeholder="Вашето запитване"
+                  required
+                ></textarea>
+              </div>
+              <div class="form-group">
                 <button
+                  id="submitBtn"
                   type="submit"
                   class="form-control submit px-3 btn btn-primary"
                 >
-                  Изпрати запитване
+                  Изпрати
                 </button>
               </div>
-              <div class="form-group">
-                <small class="text-muted d-block"
-                  >Отговаряме обикновено до 1 работен ден.</small
-                >
-              </div>
             </form>
+            <div
+              id="successMsg"
+              style="display: none; color: rgb(100, 224, 100)"
+            >
+              Съобщението беше изпратено успешно!
+            </div>
           </div>
         </div>
       </div>
@@ -1282,5 +1264,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/custom.js"></script>
   </body>
 </html>
