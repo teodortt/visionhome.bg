@@ -12843,23 +12843,3 @@ textarea.form-control {
   }
 }
 
-//custom navbar contacts
-/* По подразбиране (desktop) да си стои вдясно (order-lg-last вече помага) */
-.navbar-contact-inline {
-  /* без width:100% тук */
-  margin-left: auto; /* подсигурява избутване вдясно ако е в същия flex контейнер */
-}
-
-/* Само за екрани под 992px (Bootstrap breakpoint lg) */
-@media (max-width: 991.98px) {
-  .navbar-contact-inline {
-    width: 100%;
-    justify-content: center !important;
-    padding: 0.35rem 0;
-    margin-left: 0;
-  }
-  /* За да не се “залепва” до други елементи ако collapse е отворен */
-  .navbar-contact-inline a {
-    font-size: 0.9rem;
-  }
-}
