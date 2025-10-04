@@ -12873,3 +12873,8 @@ textarea.form-control {
 .bg-dim .small {
   color: #ffffff;
 }
+
+.text-footer {
+  /* font-weight: 600 !important; */
+  color: #ffffff !important;
+}
