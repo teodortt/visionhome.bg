@@ -10500,13 +10500,13 @@ h5,
 }
 
 .ftco-navbar-light {
-  background: #00043c !important;
+  /* background: #00043c !important; */
   z-index: 3;
   padding: 0;
 }
 @media (max-width: 991.98px) {
   .ftco-navbar-light {
-    background: #000000 !important;
+    /* background: #000000 !important; */
     position: relative;
     top: 0;
     padding: 10px 15px;
@@ -12841,48 +12841,4 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px;
   }
-}
-
-.bg-dim {
-  position: relative;
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.bg-dim::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 0;
-  pointer-events: none;
-}
-
-.bg-dim > * {
-  position: relative;
-  font-weight: 600;
-  letter-spacing: 0.25px;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.85), 0 2px 4px rgba(0, 0, 0, 0.7),
-    0 0 10px rgba(0, 0, 0, 0.55);
-  -webkit-text-stroke: 0.4px rgba(0, 0, 0, 0.45);
-  z-index: 1;
-}
-
-.bg-dim .small {
-  color: #ffffff;
-}
-
-.text-footer {
-  /* font-weight: 600 !important; */
-  color: #ffffff !important;
-}
-
-#submitBtn {
-  border-color: #0d6efd;
-  color: #fff !important;
-  font-weight: 600;
-  letter-spacing: 0.2px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
