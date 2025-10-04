@@ -37,95 +37,52 @@
 	$.Scrollax();
 
 	var carousel = function () {
-
-		// HERO SLIDER
-		var $home = $('.home-slider');
-		$home
-			.on('initialized.owl.carousel changed.owl.carousel refreshed.owl.carousel', function () {
-				patchHomeA11y();
-			})
-			.owlCarousel({
-				loop: true,
-				autoplay: true,
-				margin: 0,
-				animateOut: 'fadeOut',
-				animateIn: 'fadeIn',
-				nav: true,
-				dots: true,
-				autoplayHoverPause: false,
-				items: 1,
-				navText: [
-					"<span class='ion-ios-arrow-back'></span>",
-					"<span class='ion-ios-arrow-forward'></span>"
-				],
-				responsive: { 0: { items: 1 }, 600: { items: 1 }, 1000: { items: 1 } }
-			});
-
-		function patchHomeA11y() {
-			var $wrap = $('.home-slider');
-			var $prev = $wrap.find('.owl-prev');
-			var $next = $wrap.find('.owl-next');
-			if ($prev.length) $prev.attr({ 'aria-label': 'Предишен слайд', 'type': 'button' }).removeAttr('role');
-			if ($next.length) $next.attr({ 'aria-label': 'Следващ слайд', 'type': 'button' }).removeAttr('role');
-
-			var $dots = $wrap.find('.owl-dot');
-			var total = $dots.length;
-			if (total) {
-				$dots.each(function (i) {
-					$(this)
-						.attr({ 'aria-label': 'Слайд ' + (i + 1) + ' от ' + total, 'type': 'button' })
-						.removeAttr('role');
-				});
-				$dots.removeAttr('aria-current')
-					.filter('.active')
-					.attr('aria-current', 'true');
-			}
-		}
-
-		// TESTIMONY SLIDER
-		var $test = $('.carousel-testimony');
-		$test
-			.on('initialized.owl.carousel changed.owl.carousel refreshed.owl.carousel', function () {
-				patchTestA11y();
-			})
-			.owlCarousel({
-				center: true,
-				loop: true,
-				items: 1,
-				margin: 30,
-				stagePadding: 0,
-				nav: false,
-				dots: true,
-				navText: [
-					"<span class='ion-ios-arrow-back'></span>",
-					"<span class='ion-ios-arrow-forward'></span>"
-				],
-				responsive: {
-					0: { items: 1 },
-					600: { items: 2 },
-					1000: { items: 3 }
+		$('.home-slider').owlCarousel({
+			loop: true,
+			autoplay: true,
+			margin: 0,
+			animateOut: 'fadeOut',
+			animateIn: 'fadeIn',
+			nav: true,
+			dots: true,
+			autoplayHoverPause: false,
+			items: 1,
+			navText: ["<span class='ion-ios-arrow-back'></span>", "<span class='ion-ios-arrow-forward'></span>"],
+			responsive: {
+				0: {
+					items: 1
+				},
+				600: {
+					items: 1
+				},
+				1000: {
+					items: 1
 				}
-			});
-
-		function patchTestA11y() {
-			// Няма nav (nav:false), така че само dots
-			var $wrap = $('.carousel-testimony');
-			var $dots = $wrap.find('.owl-dot');
-			var total = $dots.length;
-			if (total) {
-				$dots.each(function (i) {
-					$(this)
-						.attr({ 'aria-label': 'Отзив ' + (i + 1) + ' от ' + total, 'type': 'button' })
-						.removeAttr('role');
-				});
-				$dots.removeAttr('aria-current')
-					.filter('.active')
-					.attr('aria-current', 'true');
 			}
-		}
+		});
+
+		$('.carousel-testimony').owlCarousel({
+			center: true,
+			loop: true,
+			items: 1,
+			margin: 30,
+			stagePadding: 0,
+			nav: false,
+			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
+			responsive: {
+				0: {
+					items: 1
+				},
+				600: {
+					items: 2
+				},
+				1000: {
+					items: 3
+				}
+			}
+		});
 
 	};
-
 	carousel();
 
 	$('nav .dropdown').hover(function () {
