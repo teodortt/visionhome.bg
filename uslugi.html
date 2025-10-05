@@ -43,6 +43,20 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/custom.css" />
   </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=AW-17625363226"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "AW-17625363226");
+  </script>
   <body>
     <nav
       class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light bg-blur position-fixed w-100"
@@ -120,7 +134,180 @@
     <section class="ftco-section ftco-no-pt ftco-no-pb">
       <div class="container-fluid px-md-0">
         <div class="row no-gutters">
-          <div class="col-md-4 ftco-animate">
+          <!-- 1: Електроинсталации -->
+          <div class="col-md-4 ftco-animate" data-category="electro">
+            <div
+              class="work img d-flex align-items-end bg-dim"
+              style="background-image: url(images/work-1.webp)"
+              aria-label="Електроинсталации - окабеляване и електрически табла"
+            >
+              <a
+                href="images/work-1.webp"
+                class="icon image-popup d-flex justify-content-center align-items-center"
+              >
+                <span class="icon-expand"></span>
+              </a>
+              <div class="desc w-100 px-4">
+                <div class="text w-100 mb-3">
+                  <span>Електро</span>
+                  <h3>
+                    <a href="uslugi/elektroinstalacii.html"
+                      >Електроинсталации</a
+                    >
+                  </h3>
+                  <p class="small mb-0">
+                    Окабеляване, табла, защити, ключове, осветление, смарт
+                    елементи.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2: ВиК инсталации -->
+          <div class="col-md-4 ftco-animate" data-category="vik">
+            <div
+              class="work img d-flex align-items-end bg-dim"
+              style="background-image: url(images/work-2.webp)"
+              aria-label="ВиК инсталации - тръби, разводки и отводняване"
+            >
+              <a
+                href="images/work-2.webp"
+                class="icon image-popup d-flex justify-content-center align-items-center"
+              >
+                <span class="icon-expand"></span>
+              </a>
+              <div class="desc w-100 px-4">
+                <div class="text w-100 mb-3">
+                  <span>ВиК</span>
+                  <h3>
+                    <a href="uslugi/vik-instalacii.html">ВиК инсталации</a>
+                  </h3>
+                  <p class="small mb-0">
+                    Разводки, подмяна, връзки за уреди, отводняване и
+                    подготовка.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3: Монтаж на оборудване -->
+          <div class="col-md-4 ftco-animate" data-category="montaj">
+            <div
+              class="work img d-flex align-items-end bg-dim"
+              style="background-image: url(images/work-3.webp)"
+              aria-label="Монтаж на оборудване - санитария, бойлери, осветление"
+            >
+              <a
+                href="images/work-3.webp"
+                class="icon image-popup d-flex justify-content-center align-items-center"
+              >
+                <span class="icon-expand"></span>
+              </a>
+              <div class="desc w-100 px-4">
+                <div class="text w-100 mb-3">
+                  <span>Монтаж</span>
+                  <h3>
+                    <a href="uslugi/montaj-oborudvane.html"
+                      >Монтаж на оборудване</a
+                    >
+                  </h3>
+                  <p class="small mb-0">
+                    Санитария, мивки, бойлери, шкафове, осветителни тела,
+                    аксесоари.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4: Ремонти и реконструкции -->
+          <div class="col-md-4 ftco-animate" data-category="remont">
+            <div
+              class="work img d-flex align-items-end bg-dim"
+              style="background-image: url(images/work-4.webp)"
+              aria-label="Ремонти и реконструкции - преустройства и модернизация"
+            >
+              <a
+                href="images/work-4.webp"
+                class="icon image-popup d-flex justify-content-center align-items-center"
+              >
+                <span class="icon-expand"></span>
+              </a>
+              <div class="desc w-100 px-4">
+                <div class="text w-100 mb-3">
+                  <span>Ремонт</span>
+                  <h3>
+                    <a href="uslugi/remont-rekonstrukcii.html"
+                      >Ремонти и реконструкции</a
+                    >
+                  </h3>
+                  <p class="small mb-0">
+                    Преустройства, адаптации, корекции преди/след инсталации.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5: Интериор и довършителни -->
+          <div class="col-md-4 ftco-animate" data-category="interior">
+            <div
+              class="work img d-flex align-items-end bg-dim"
+              style="background-image: url(images/work-5.webp)"
+              aria-label="Интериор и довършителни работи - шпакловка, боядисване, настилки"
+            >
+              <a
+                href="images/work-5.webp"
+                class="icon image-popup d-flex justify-content-center align-items-center"
+              >
+                <span class="icon-expand"></span>
+              </a>
+              <div class="desc w-100 px-4">
+                <div class="text w-100 mb-3">
+                  <span>Интериор</span>
+                  <h3>
+                    <a href="uslugi/interior-dovurshitelni.html"
+                      >Интериор и довършителни</a
+                    >
+                  </h3>
+                  <p class="small mb-0">
+                    Шпакловки, боядисване, подови настилки, декоративни решения.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6: Монтаж на врати -->
+          <div class="col-md-4 ftco-animate" data-category="vrati">
+            <div
+              class="work img d-flex align-items-end bg-dim"
+              style="background-image: url(images/work-6.webp)"
+              aria-label="Монтаж на интериорни и входни врати"
+            >
+              <a
+                href="images/work-6.webp"
+                class="icon image-popup d-flex justify-content-center align-items-center"
+              >
+                <span class="icon-expand"></span>
+              </a>
+              <div class="desc w-100 px-4">
+                <div class="text w-100 mb-3">
+                  <span>Монтаж на врати</span>
+                  <h3>
+                    <a href="uslugi/montaj-vrati.html">Монтаж на врати</a>
+                  </h3>
+                  <p class="small mb-0">
+                    Интериорни, входни, плъзгащи, подкъвяване, корекции на
+                    отвори, обков.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-md-4 ftco-animate">
             <div
               class="work img d-flex align-items-end bg-dim"
               style="background-image: url(images/work-1.webp)"
@@ -246,71 +433,7 @@
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="col-md-4 ftco-animate">
-            <div
-              class="work img d-flex align-items-end bg-dim"
-              style="background-image: url(images/work-7.webp)"
-            >
-              <a
-                href="images/work-7.webp"
-                class="icon image-popup d-flex justify-content-center align-items-center"
-              >
-                <span class="icon-expand"></span>
-              </a>
-              <div class="desc w-100 px-4">
-                <div class="text w-100 mb-3">
-                  <span>Building</span>
-                  <h2>
-                    <a href="work-single.html">College Health Profession</a>
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div
-              class="work img d-flex align-items-end bg-dim"
-              style="background-image: url(images/work-8.webp)"
-            >
-              <a
-                href="images/work-8.webp"
-                class="icon image-popup d-flex justify-content-center align-items-center"
-              >
-                <span class="icon-expand"></span>
-              </a>
-              <div class="desc w-100 px-4">
-                <div class="text w-100 mb-3">
-                  <span>Building</span>
-                  <h2>
-                    <a href="work-single.html">College Health Profession</a>
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div
-              class="work img d-flex align-items-end bg-dim"
-              style="background-image: url(images/work-9.webp)"
-            >
-              <a
-                href="images/work-9.webp"
-                class="icon image-popup d-flex justify-content-center align-items-center"
-              >
-                <span class="icon-expand"></span>
-              </a>
-              <div class="desc w-100 px-4">
-                <div class="text w-100 mb-3">
-                  <span>Building</span>
-                  <h2>
-                    <a href="work-single.html">College Health Profession</a>
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
