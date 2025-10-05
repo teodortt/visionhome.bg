@@ -48,3 +48,11 @@
   letter-spacing: 0.2px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
+
+.viber-icon img {
+  transition: filter 0.3s;
+}
+
+.viber-icon:hover img {
+  filter: brightness(0) invert(1);
+}
