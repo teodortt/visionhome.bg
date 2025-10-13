@@ -79,20 +79,6 @@
     />
     <link rel="manifest" href="favicon/site.webmanifest" />
   </head>
-  <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=AW-17625363226"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "AW-17625363226");
-  </script>
   <body>
     <!-- <div class="container pt-5">
       <div class="row justify-content-between">
@@ -1404,6 +1390,35 @@
         "telephone": "+359877959231",
         "openingHours": "Mo-Fr 08:30-18:00"
       }
+    </script>
+    <script>
+      window.addEventListener("load", function () {
+        let gtmLoaded = false;
+        const loadGTM = () => {
+          if (gtmLoaded) return;
+          gtmLoaded = true;
+
+          (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+            var f = d.getElementsByTagName(s)[0],
+              j = d.createElement(s),
+              dl = l != "dataLayer" ? "&l=" + l : "";
+            j.async = true;
+            j.src = "https://www.googletagmanager.com/gtag/js?id=" + i + dl;
+            f.parentNode.insertBefore(j, f);
+          })(window, document, "script", "dataLayer", "AW-17625363226");
+        };
+
+        ["scroll", "touchstart", "click"].forEach((event) => {
+          window.addEventListener(event, loadGTM, {
+            once: true,
+            passive: true,
+          });
+        });
+
+        setTimeout(loadGTM, 5000);
+      });
     </script>
   </body>
 </html>
