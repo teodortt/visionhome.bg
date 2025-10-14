@@ -41,7 +41,7 @@
   color: #ffffff !important;
 }
 
-#submitBtn {
+.submitBtn {
   border-color: #0d6efd;
   color: #fff !important;
   font-weight: 600;
