@@ -81,22 +81,6 @@
       href="favicon/apple-touch-icon.png"
     />
     <link rel="manifest" href="favicon/site.webmanifest" />
-    <!-- Event snippet for Contact conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-    <script>
-      function gtag_report_conversion(url) {
-        var callback = function () {
-          if (typeof url != "undefined") {
-            window.location = url;
-          }
-        };
-        gtag("event", "conversion", {
-          send_to: "AW-17655576561/jCCSCPGvjrgbEPHv6uJB",
-          event_callback: callback,
-        });
-        return false;
-      }
-    </script>
   </head>
   <body>
     <!-- <div class="container pt-5">
@@ -184,10 +168,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           <div
             class="px-2 flex-wrap border border-secondary border-opacity-10 rounded order-lg-last d-flex justify-content-center align-items-center mb-0"
           >
-            <a
-              href="tel:+359877959231"
-              onclick="return gtag_report_conversion()"
-            >
+            <a href="tel:+359877959231">
               <span class="fa fa-phone mr-2"></span> +359 877 959 231
             </a>
             <!-- <span class="mx-3 text-muted separator" style="opacity: 0.5">|</span>
@@ -1227,10 +1208,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 <ul class="list-unstyled contact-list">
                   <li>
                     <strong class="text-footer">Тел.:</strong>
-                    <a
-                      class="text-footer"
-                      href="tel:+359877959231"
-                      onclick="return gtag_report_conversion()"
+                    <a class="text-footer" href="tel:+359877959231"
                       >+359877959231</a
                     >
                   </li>
