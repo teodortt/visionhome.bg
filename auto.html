@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <!-- SEO Optimization -->
-    <title>VisionAuto | Професионално рециклиране и полиране на фарове</title>
+    <title>VisionAuto | Рециклиране, Полиране и Ремонт на LED Фарове</title>
     <meta
       name="description"
-      content="VisionAuto предлага професионално рециклиране, ремонт и полиране на автомобилни фарове и стопове. Възстановете перфектната видимост и външен вид на вашия автомобил."
+      content="VisionAuto предлага професионално рециклиране, ремонт на автомобилни фарове, полиране и специализиран ремонт на изгорели LED светлини (DRL). Запишете час!"
     />
     <meta
       name="keywords"
-      content="рециклиране фарове, ремонт фарове, полиране фарове, полиране стопове, възстановяване на фарове, автоуслуги София"
+      content="рециклиране фарове, ремонт фарове, полиране фарове, ремонт стопове, ремонт на LED фарове, изгорели дневни светлини, DRL ремонт, автоуслуги София"
     />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="VisionAuto" />
@@ -21,11 +21,11 @@
     <!-- Open Graph / Social Media -->
     <meta
       property="og:title"
-      content="VisionAuto | Рециклиране и ремонт на фарове"
+      content="VisionAuto | Рециклиране и LED ремонт на фарове"
     />
     <meta
       property="og:description"
-      content="Възстановяване на прозрачност, светимост и безопасност на пътя. Запишете час днес!"
+      content="Възстановяване на прозрачност и професионален ремонт на изгорели фабрични LED светлини."
     />
     <meta
       property="og:image"
@@ -41,12 +41,39 @@
         "@type": "AutoRepair",
         "name": "VisionAuto",
         "image": "https://images.unsplash.com/photo-1485291571150-772bcfc10da5?q=80&w=1920&auto=format&fit=crop",
-        "description": "Професионално рециклиране, ремонт и полиране на автомобилни фарове и стопове.",
+        "description": "Професионално рециклиране, полиране и специализиран ремонт на фабрични LED фарове и стопове.",
         "telephone": "+359878915118",
         "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
           "addressCountry": "BG"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Услуги за авто светлини",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Рециклиране на фарове"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Ремонт на LED и DRL светлини"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Полиране на фарове"
+              }
+            }
+          ]
         }
       }
     </script>
@@ -67,6 +94,7 @@
         --primary-color: #f96d00;
         --primary-hover: #ff8522;
         --dark-bg: #0d0d0d;
+        --section-bg: #151515;
         --card-bg: rgba(25, 25, 25, 0.8);
         --text-light: #f4f4f4;
         --text-muted: #aaaaaa;
@@ -99,7 +127,8 @@
       /* Typography */
       h1,
       h2,
-      h3 {
+      h3,
+      h4 {
         font-weight: 800;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -150,7 +179,7 @@
         box-shadow: 0 0 15px rgba(249, 109, 0, 0.4);
       }
 
-      /* Hero Parallax Section */
+      /* Hero Parallax */
       .hero {
         position: relative;
         height: 100vh;
@@ -194,22 +223,24 @@
         font-weight: 600;
       }
       .hero h1 {
-        font-size: 4rem;
+        font-size: 3.5rem;
         margin-bottom: 20px;
-        line-height: 1.1;
+        line-height: 1.2;
         text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
       }
       .hero p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         color: var(--text-muted);
         margin-bottom: 40px;
       }
 
       /* Buttons */
       .btn {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         padding: 15px 35px;
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 600;
         border-radius: 50px;
         text-transform: uppercase;
@@ -240,9 +271,12 @@
         transform: translateY(-3px);
       }
 
-      /* Sections */
+      /* General Section Styles */
       section {
         padding: 100px 20px;
+      }
+      .bg-alternate {
+        background-color: var(--section-bg);
       }
       .container {
         max-width: 1200px;
@@ -264,10 +298,10 @@
         font-size: 14px;
       }
 
-      /* Services Cards Grid */
+      /* Services Grid (4 Items) */
       .services-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 30px;
       }
       .service-card {
@@ -275,7 +309,7 @@
         border: 1px solid rgba(255, 255, 255, 0.05);
         padding: 40px 30px;
         border-radius: 15px;
-        text-align: center;
+        text-align: left;
         transition: var(--transition);
         position: relative;
         overflow: hidden;
@@ -309,22 +343,22 @@
         transition: var(--transition);
       }
       .service-card:hover .service-icon {
-        transform: scale(1.1);
+        transform: scale(1.1) rotate(5deg);
       }
       .service-card h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         margin-bottom: 15px;
       }
       .service-card ul {
-        text-align: left;
         color: var(--text-muted);
-        margin-top: 20px;
+        margin-top: 15px;
+        font-size: 14px;
       }
       .service-card ul li {
-        padding: 10px 0;
+        padding: 8px 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         display: flex;
-        align-items: center;
+        align-items: flex-start;
       }
       .service-card ul li:last-child {
         border-bottom: none;
@@ -332,17 +366,152 @@
       .service-card ul li i {
         color: var(--primary-color);
         margin-right: 10px;
-        font-size: 14px;
+        margin-top: 4px;
+        font-size: 12px;
+      }
+
+      /* Split Section: LED Repair */
+      .led-section {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+      }
+      .led-content {
+        flex: 1;
+      }
+      .led-content h2 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+      }
+      .led-content p {
+        color: var(--text-muted);
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+      }
+      .led-features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 30px;
+      }
+      .led-feature {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }
+      .led-feature i {
+        font-size: 24px;
+        color: var(--primary-color);
+        background: rgba(249, 109, 0, 0.1);
+        padding: 15px;
+        border-radius: 12px;
+      }
+      .led-feature h4 {
+        font-size: 1rem;
+        margin-bottom: 0;
+      }
+
+      .led-visual {
+        flex: 1;
+        position: relative;
+      }
+      .led-image-box {
+        background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+        border: 1px solid rgba(249, 109, 0, 0.2);
+        border-radius: 20px;
+        padding: 40px;
+        text-align: center;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        position: relative;
+        overflow: hidden;
+      }
+      /* Decorative glow for LED visual */
+      .led-image-box::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 150px;
+        height: 150px;
+        background: var(--primary-color);
+        filter: blur(100px);
+        opacity: 0.3;
+        animation: pulseGlow 4s infinite alternate;
+      }
+      @keyframes pulseGlow {
+        0% {
+          opacity: 0.2;
+          transform: translate(-50%, -50%) scale(1);
+        }
+        100% {
+          opacity: 0.5;
+          transform: translate(-50%, -50%) scale(1.2);
+        }
+      }
+      .led-image-box i {
+        font-size: 80px;
+        color: #fff;
+        position: relative;
+        z-index: 2;
+        text-shadow: 0 0 20px rgba(249, 109, 0, 0.8);
+      }
+
+      /* Process Steps */
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 40px;
+        counter-reset: process-counter;
+      }
+      .step-card {
+        text-align: center;
+        position: relative;
+      }
+      .step-number {
+        width: 60px;
+        height: 60px;
+        background: var(--primary-color);
+        color: #fff;
+        font-size: 24px;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin: 0 auto 20px;
+        box-shadow: 0 10px 20px rgba(249, 109, 0, 0.3);
+        position: relative;
+        z-index: 2;
+      }
+      .step-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+      }
+      .step-card p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+      }
+
+      /* Connecting Line for process (Desktop only) */
+      @media (min-width: 992px) {
+        .step-card:not(:last-child)::after {
+          content: "";
+          position: absolute;
+          top: 30px;
+          left: calc(50% + 30px);
+          width: calc(100% - 60px);
+          height: 2px;
+          background: dashed 2px rgba(255, 255, 255, 0.1);
+          z-index: 1;
+        }
       }
 
       /* Importance Section */
-      .info-section {
-        background: #151515;
-        border-top: 1px solid rgba(255, 255, 255, 0.02);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.02);
-      }
       .info-content {
-        background: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+        background:
+          url("https://www.transparenttextures.com/patterns/carbon-fibre.png"),
+          linear-gradient(135deg, #151515, #0d0d0d);
         padding: 60px;
         border-radius: 20px;
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
@@ -408,11 +577,23 @@
       .delay-2 {
         transition-delay: 0.4s;
       }
+      .delay-3 {
+        transition-delay: 0.6s;
+      }
 
       /* Responsive Design */
+      @media (max-width: 992px) {
+        .led-section {
+          flex-direction: column;
+          text-align: center;
+        }
+        .led-features {
+          text-align: left;
+        }
+      }
       @media (max-width: 768px) {
         .hero h1 {
-          font-size: 2.5rem;
+          font-size: 2.2rem;
         }
         .navbar {
           padding: 15px 20px;
@@ -420,14 +601,27 @@
         .btn-outline {
           margin-left: 0;
           margin-top: 15px;
-          display: block;
+          display: flex;
+          width: 100%;
+        }
+        .btn-primary {
+          display: flex;
+          width: 100%;
+        }
+        .hero-btns {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
         }
         .info-content {
           padding: 30px 20px;
         }
         .nav-contact span {
           display: none;
-        } /* Hide text on mobile for contact nav */
+        }
+        .led-features {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
@@ -447,18 +641,18 @@
       </a>
     </header>
 
-    <!-- Main Content Area -->
+    <!-- Main Content -->
     <main>
-      <!-- Hero Section with Parallax -->
+      <!-- Hero Section -->
       <section class="hero">
         <div class="hero-content reveal">
-          <span class="hero-subtitle">Професионална автокозметика</span>
+          <span class="hero-subtitle">Премиум автокозметика & LED услуги</span>
           <h1>
             Рециклиране, ремонт и полиране на <span class="accent">фарове</span>
           </h1>
           <p>
-            Възстановяване на прозрачност, светимост и външен вид за максимална
-            видимост и безопасност на пътя. Защитете инвестицията си.
+            Възстановяване на прозрачност, пълно рециклиране и експертен ремонт
+            на фабрични LED светлини. Погрижете се за вашата сигурност на пътя.
           </p>
           <div class="hero-btns">
             <a href="tel:+359878915118" class="btn btn-primary"
@@ -476,10 +670,10 @@
         </div>
       </section>
 
-      <!-- Services Section -->
-      <section class="container">
+      <!-- Services Grid -->
+      <section class="container" id="services">
         <div class="section-header reveal">
-          <span>Какво предлагаме</span>
+          <span>Комплексни решения</span>
           <h2>Нашите <span class="accent">услуги</span></h2>
         </div>
 
@@ -488,15 +682,14 @@
           <div class="service-card reveal">
             <div class="service-icon"><i class="fa-solid fa-recycle"></i></div>
             <h3>Рециклиране</h3>
-            <p>Пълно обновяване на вашите светлини отвътре и отвън.</p>
+            <p>Пълно обновяване на вашите светлини.</p>
             <ul>
-              <li><i class="fa-solid fa-check"></i> Почистване на отлагания</li>
               <li>
-                <i class="fa-solid fa-check"></i> Подмяна на крепежи и
-                уплътнения
+                <i class="fa-solid fa-check"></i> Почистване на рефлектори
               </li>
+              <li><i class="fa-solid fa-check"></i> Подмяна на уплътнения</li>
               <li>
-                <i class="fa-solid fa-check"></i> Подготовка за дълготрайност
+                <i class="fa-solid fa-check"></i> Премахване на вътрешен прах
               </li>
             </ul>
           </div>
@@ -506,18 +699,17 @@
             <div class="service-icon">
               <i class="fa-solid fa-screwdriver-wrench"></i>
             </div>
-            <h3>Ремонт</h3>
-            <p>Отстраняване на структурни и функционални дефекти.</p>
+            <h3>Механичен Ремонт</h3>
+            <p>Отстраняване на структурни дефекти.</p>
             <ul>
               <li>
-                <i class="fa-solid fa-check"></i> Ремонт на счупени уши/корпуси
+                <i class="fa-solid fa-check"></i> Запояване на счупени уши
               </li>
               <li>
-                <i class="fa-solid fa-check"></i> Справяне със запотяване и
-                влага
+                <i class="fa-solid fa-check"></i> Справяне със запотяване/влага
               </li>
               <li>
-                <i class="fa-solid fa-check"></i> Възстановяване на стабилност
+                <i class="fa-solid fa-check"></i> Възстановяване на корпуси
               </li>
             </ul>
           </div>
@@ -527,33 +719,156 @@
             <div class="service-icon">
               <i class="fa-solid fa-wand-magic-sparkles"></i>
             </div>
-            <h3>Полиране</h3>
-            <p>Кристална чистота и защита срещу външни влияния.</p>
+            <h3>Полиране & Защита</h3>
+            <p>Кристална чистота и UV защита.</p>
             <ul>
               <li><i class="fa-solid fa-check"></i> Многостъпково шлайфане</li>
-              <li><i class="fa-solid fa-check"></i> Премахване на матиране</li>
               <li>
-                <i class="fa-solid fa-check"></i> UV защитно покритие
-                (фолио/керамика)
+                <i class="fa-solid fa-check"></i> Премахване на пожълтяване
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Защитно фолио / Керамика
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 4 (NEW: LED Repair) -->
+          <div
+            class="service-card reveal delay-3"
+            style="border-color: rgba(249, 109, 0, 0.4)"
+          >
+            <div class="service-icon">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <h3>LED & DRL Ремонт</h3>
+            <p>Ремонт на фабрична електроника.</p>
+            <ul>
+              <li><i class="fa-solid fa-check"></i> Смяна на изгорели диоди</li>
+              <li>
+                <i class="fa-solid fa-check"></i> Ремонт на платки и драйвери
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Възстановяване на дневни
+                светлини
               </li>
             </ul>
           </div>
         </div>
       </section>
 
-      <!-- Importance / Call to Action Section -->
-      <section class="info-section">
+      <!-- NEW: Dedicated LED Section -->
+      <section class="bg-alternate">
+        <div class="container led-section">
+          <div class="led-content reveal">
+            <span class="hero-subtitle">Специализирана услуга</span>
+            <h2>
+              Не купувайте нов фар.
+              <span class="accent">Ние ще го ремонтираме.</span>
+            </h2>
+            <p>
+              Съвременните автомобили са оборудвани със сложни и скъпи LED
+              системи. Често срещан проблем е изгарянето на дневната светлина
+              (DRL) или мигача. Официалните представителства често препоръчват
+              подмяна на целия фар, което струва хиляди левове.
+            </p>
+            <p>
+              Във VisionAuto предлагаме алтернатива:
+              <strong>прецизен ремонт на електронните компоненти</strong>,
+              подмяна на изгорели LED чипове и драйвери, връщайки фабричния
+              блясък и функционалност на част от цената.
+            </p>
+
+            <div class="led-features">
+              <div class="led-feature">
+                <i class="fa-solid fa-piggy-bank"></i>
+                <div>
+                  <h4>Спестявате пари</h4>
+                  <span style="font-size: 12px; color: var(--text-muted)"
+                    >В пъти по-евтино от нов фар</span
+                  >
+                </div>
+              </div>
+              <div class="led-feature">
+                <i class="fa-solid fa-award"></i>
+                <div>
+                  <h4>OEM Качество</h4>
+                  <span style="font-size: 12px; color: var(--text-muted)"
+                    >Използваме висок клас диоди</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="led-visual reveal delay-1">
+            <div class="led-image-box">
+              <i class="fa-regular fa-lightbulb"></i>
+              <h3 style="margin-top: 20px; letter-spacing: 2px">
+                LED DIAGNOSTICS
+              </h3>
+              <p
+                style="
+                  color: var(--primary-color);
+                  font-size: 14px;
+                  margin-top: 5px;
+                "
+              >
+                Micro-soldering & Component level repair
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEW: How We Work Section -->
+      <section class="container">
+        <div class="section-header reveal">
+          <span>Стъпка по стъпка</span>
+          <h2>Как работим?</h2>
+        </div>
+
+        <div class="process-grid">
+          <div class="step-card reveal">
+            <div class="step-number">1</div>
+            <h3>Оглед и Диагностика</h3>
+            <p>
+              Започваме с безплатен оглед, за да установим причината за проблема
+              – било то влага, матиране на стъклото или изгоряла платка.
+            </p>
+          </div>
+          <div class="step-card reveal delay-1">
+            <div class="step-number">2</div>
+            <h3>Разглобяване и Ремонт</h3>
+            <p>
+              Фарът се отваря със специализирани инструменти, почиства се
+              детайлно, подменят се дефектиралите части и се извършва нужното
+              шлайфане.
+            </p>
+          </div>
+          <div class="step-card reveal delay-2">
+            <div class="step-number">3</div>
+            <h3>Херметизация и Защита</h3>
+            <p>
+              Модулът се запечатва с висококачествен уплътнител (бутил) против
+              влага, а отвън се нанася UV защитно фолио или керамика за
+              дълготрайност.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Importance / CTA Section -->
+      <section class="bg-alternate" style="padding-top: 50px">
         <div class="container">
           <div class="info-content reveal">
             <h3>
-              Защо тази услуга е <span class="accent">критично важна</span>?
+              Защо професионалната намеса е
+              <span class="accent">задължителна</span>?
             </h3>
             <p>
-              Замъглените, пожълтели или напукани светлини драстично намаляват
-              видимостта на пътя, което увеличава риска при нощно шофиране. След
-              професионално възстановяване, фаровете ви не само ще изглеждат
-              като нови, но и ще осигурят до
-              <strong>300% по-добра осветеност</strong>.
+              Компромисът с автомобилните светлини означава компромис с
+              безопасността. Възстановените фарове не само променят визията на
+              колата, но и осигуряват до
+              <strong>300% по-добра осветеност</strong> на пътя.
             </p>
             <p style="color: var(--primary-color); font-weight: 600">
               Работим с предварителен оглед и прозрачна ценова оценка!
@@ -595,23 +910,19 @@
 
     <!-- Interactive JavaScript -->
     <script>
-      // Set dynamic current year in footer
+      // Dynamic year
       document.getElementById("year-copy").textContent =
         new Date().getFullYear();
 
-      // Sticky Navbar Effect on Scroll
+      // Sticky Navbar
       const navbar = document.getElementById("navbar");
       window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
-          navbar.classList.add("scrolled");
-        } else {
-          navbar.classList.remove("scrolled");
-        }
+        if (window.scrollY > 50) navbar.classList.add("scrolled");
+        else navbar.classList.remove("scrolled");
       });
 
-      // Intersection Observer for Scroll Animations (Revealing elements)
+      // Scroll Animations (Intersection Observer)
       const revealElements = document.querySelectorAll(".reveal");
-
       const revealOptions = {
         threshold: 0.15,
         rootMargin: "0px 0px -50px 0px",
@@ -622,18 +933,14 @@
         observer,
       ) {
         entries.forEach((entry) => {
-          if (!entry.isIntersecting) {
-            return;
-          } else {
+          if (entry.isIntersecting) {
             entry.target.classList.add("active");
-            observer.unobserve(entry.target); // Stop observing once it's visible
+            observer.unobserve(entry.target);
           }
         });
       }, revealOptions);
 
-      revealElements.forEach((el) => {
-        revealOnScroll.observe(el);
-      });
+      revealElements.forEach((el) => revealOnScroll.observe(el));
     </script>
   </body>
 </html>
