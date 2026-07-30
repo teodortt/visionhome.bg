@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- SEO Optimization -->
+    <title>VisionAuto | Професионално рециклиране и полиране на фарове</title>
+    <meta
+      name="description"
+      content="VisionAuto предлага професионално рециклиране, ремонт и полиране на автомобилни фарове и стопове. Възстановете перфектната видимост и външен вид на вашия автомобил."
+    />
+    <meta
+      name="keywords"
+      content="рециклиране фарове, ремонт фарове, полиране фарове, полиране стопове, възстановяване на фарове, автоуслуги София"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="VisionAuto" />
+
+    <!-- Open Graph / Social Media -->
+    <meta
+      property="og:title"
+      content="VisionAuto | Рециклиране и ремонт на фарове"
+    />
+    <meta
+      property="og:description"
+      content="Възстановяване на прозрачност, светимост и безопасност на пътя. Запишете час днес!"
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1485291571150-772bcfc10da5?q=80&w=1920&auto=format&fit=crop"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="bg_BG" />
+
+    <!-- Schema.org JSON-LD for Local SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AutoRepair",
+        "name": "VisionAuto",
+        "image": "https://images.unsplash.com/photo-1485291571150-772bcfc10da5?q=80&w=1920&auto=format&fit=crop",
+        "description": "Професионално рециклиране, ремонт и полиране на автомобилни фарове и стопове.",
+        "telephone": "+359878915118",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "BG"
+        }
+      }
+    </script>
+
+    <!-- Fonts & Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Custom Styles -->
+    <style>
+      :root {
+        --primary-color: #f96d00;
+        --primary-hover: #ff8522;
+        --dark-bg: #0d0d0d;
+        --card-bg: rgba(25, 25, 25, 0.8);
+        --text-light: #f4f4f4;
+        --text-muted: #aaaaaa;
+        --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: var(--dark-bg);
+        color: var(--text-light);
+        line-height: 1.6;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      ul {
+        list-style: none;
+      }
+
+      /* Typography */
+      h1,
+      h2,
+      h3 {
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .accent {
+        color: var(--primary-color);
+      }
+
+      /* Navbar */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        transition: var(--transition);
+        background: transparent;
+      }
+      .navbar.scrolled {
+        background: rgba(13, 13, 13, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 15px 50px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+      }
+      .logo {
+        font-size: 28px;
+        font-weight: 800;
+        letter-spacing: 2px;
+      }
+      .nav-contact {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-weight: 600;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .nav-contact:hover {
+        background: var(--primary-color);
+        border-color: var(--primary-color);
+        box-shadow: 0 0 15px rgba(249, 109, 0, 0.4);
+      }
+
+      /* Hero Parallax Section */
+      .hero {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-image: url("https://images.unsplash.com/photo-1485291571150-772bcfc10da5?q=80&w=1920&auto=format&fit=crop");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0 20px;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.7),
+          rgba(13, 13, 13, 1)
+        );
+        z-index: 1;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 900px;
+      }
+      .hero-subtitle {
+        font-size: 14px;
+        letter-spacing: 4px;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        display: block;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+      .hero h1 {
+        font-size: 4rem;
+        margin-bottom: 20px;
+        line-height: 1.1;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+      }
+      .hero p {
+        font-size: 1.2rem;
+        color: var(--text-muted);
+        margin-bottom: 40px;
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-block;
+        padding: 15px 35px;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 50px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: var(--transition);
+        cursor: pointer;
+        border: 2px solid transparent;
+      }
+      .btn-primary {
+        background-color: var(--primary-color);
+        color: #fff;
+        box-shadow: 0 10px 30px rgba(249, 109, 0, 0.3);
+      }
+      .btn-primary:hover {
+        background-color: var(--primary-hover);
+        transform: translateY(-3px);
+        box-shadow: 0 15px 35px rgba(249, 109, 0, 0.5);
+      }
+      .btn-outline {
+        background-color: transparent;
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+        margin-left: 15px;
+      }
+      .btn-outline:hover {
+        background-color: var(--primary-color);
+        color: #fff;
+        transform: translateY(-3px);
+      }
+
+      /* Sections */
+      section {
+        padding: 100px 20px;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .section-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      .section-header h2 {
+        font-size: 2.5rem;
+        margin-top: 10px;
+      }
+      .section-header span {
+        color: var(--primary-color);
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 14px;
+      }
+
+      /* Services Cards Grid */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+      .service-card {
+        background: var(--card-bg);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 40px 30px;
+        border-radius: 15px;
+        text-align: center;
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+      }
+      .service-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: var(--primary-color);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: var(--transition);
+      }
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        border-color: rgba(249, 109, 0, 0.3);
+      }
+      .service-card:hover::before {
+        transform: scaleX(1);
+      }
+      .service-icon {
+        font-size: 40px;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        display: inline-block;
+        transition: var(--transition);
+      }
+      .service-card:hover .service-icon {
+        transform: scale(1.1);
+      }
+      .service-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+      }
+      .service-card ul {
+        text-align: left;
+        color: var(--text-muted);
+        margin-top: 20px;
+      }
+      .service-card ul li {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        display: flex;
+        align-items: center;
+      }
+      .service-card ul li:last-child {
+        border-bottom: none;
+      }
+      .service-card ul li i {
+        color: var(--primary-color);
+        margin-right: 10px;
+        font-size: 14px;
+      }
+
+      /* Importance Section */
+      .info-section {
+        background: #151515;
+        border-top: 1px solid rgba(255, 255, 255, 0.02);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+      }
+      .info-content {
+        background: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+        padding: 60px;
+        border-radius: 20px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .info-content h3 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+      .info-content p {
+        font-size: 1.1rem;
+        color: var(--text-muted);
+        margin-bottom: 30px;
+        max-width: 800px;
+        margin-inline: auto;
+      }
+
+      /* Footer */
+      footer {
+        background: #0a0a0a;
+        padding: 40px 20px;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      footer p {
+        color: var(--text-muted);
+        font-size: 14px;
+      }
+      footer .social-icons {
+        margin-top: 20px;
+      }
+      footer .social-icons a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.05);
+        margin: 0 10px;
+        transition: var(--transition);
+      }
+      footer .social-icons a:hover {
+        background: var(--primary-color);
+        color: #fff;
+        transform: translateY(-3px);
+      }
+
+      /* JS Animations Classes */
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .delay-1 {
+        transition-delay: 0.2s;
+      }
+      .delay-2 {
+        transition-delay: 0.4s;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+        .navbar {
+          padding: 15px 20px;
+        }
+        .btn-outline {
+          margin-left: 0;
+          margin-top: 15px;
+          display: block;
+        }
+        .info-content {
+          padding: 30px 20px;
+        }
+        .nav-contact span {
+          display: none;
+        } /* Hide text on mobile for contact nav */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+      <a href="/" class="logo" aria-label="VisionAuto Начало">
+        VISION<span class="accent">AUTO</span>
+      </a>
+      <a
+        href="tel:+359878915118"
+        class="nav-contact"
+        aria-label="Обадете се сега"
+      >
+        <i class="fa-solid fa-phone"></i>
+        <span>+359 878 915 118</span>
+      </a>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+      <!-- Hero Section with Parallax -->
+      <section class="hero">
+        <div class="hero-content reveal">
+          <span class="hero-subtitle">Професионална автокозметика</span>
+          <h1>
+            Рециклиране, ремонт и полиране на <span class="accent">фарове</span>
+          </h1>
+          <p>
+            Възстановяване на прозрачност, светимост и външен вид за максимална
+            видимост и безопасност на пътя. Защитете инвестицията си.
+          </p>
+          <div class="hero-btns">
+            <a href="tel:+359878915118" class="btn btn-primary"
+              ><i
+                class="fa-solid fa-calendar-check"
+                style="margin-right: 8px"
+              ></i>
+              Запази час</a
+            >
+            <a href="viber://chat?number=+359878915118" class="btn btn-outline"
+              ><i class="fa-brands fa-viber" style="margin-right: 8px"></i> Пиши
+              във Viber</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="container">
+        <div class="section-header reveal">
+          <span>Какво предлагаме</span>
+          <h2>Нашите <span class="accent">услуги</span></h2>
+        </div>
+
+        <div class="services-grid">
+          <!-- Card 1 -->
+          <div class="service-card reveal">
+            <div class="service-icon"><i class="fa-solid fa-recycle"></i></div>
+            <h3>Рециклиране</h3>
+            <p>Пълно обновяване на вашите светлини отвътре и отвън.</p>
+            <ul>
+              <li><i class="fa-solid fa-check"></i> Почистване на отлагания</li>
+              <li>
+                <i class="fa-solid fa-check"></i> Подмяна на крепежи и
+                уплътнения
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Подготовка за дълготрайност
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="service-card reveal delay-1">
+            <div class="service-icon">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
+            <h3>Ремонт</h3>
+            <p>Отстраняване на структурни и функционални дефекти.</p>
+            <ul>
+              <li>
+                <i class="fa-solid fa-check"></i> Ремонт на счупени уши/корпуси
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Справяне със запотяване и
+                влага
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Възстановяване на стабилност
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="service-card reveal delay-2">
+            <div class="service-icon">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <h3>Полиране</h3>
+            <p>Кристална чистота и защита срещу външни влияния.</p>
+            <ul>
+              <li><i class="fa-solid fa-check"></i> Многостъпково шлайфане</li>
+              <li><i class="fa-solid fa-check"></i> Премахване на матиране</li>
+              <li>
+                <i class="fa-solid fa-check"></i> UV защитно покритие
+                (фолио/керамика)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Importance / Call to Action Section -->
+      <section class="info-section">
+        <div class="container">
+          <div class="info-content reveal">
+            <h3>
+              Защо тази услуга е <span class="accent">критично важна</span>?
+            </h3>
+            <p>
+              Замъглените, пожълтели или напукани светлини драстично намаляват
+              видимостта на пътя, което увеличава риска при нощно шофиране. След
+              професионално възстановяване, фаровете ви не само ще изглеждат
+              като нови, но и ще осигурят до
+              <strong>300% по-добра осветеност</strong>.
+            </p>
+            <p style="color: var(--primary-color); font-weight: 600">
+              Работим с предварителен оглед и прозрачна ценова оценка!
+            </p>
+            <a
+              href="tel:+359878915118"
+              class="btn btn-primary mt-3"
+              style="margin-top: 20px"
+              >Поискай безплатен оглед</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container reveal">
+        <div class="logo" style="font-size: 20px; margin-bottom: 10px">
+          VISION<span class="accent">AUTO</span>
+        </div>
+        <p>
+          &copy; <span id="year-copy"></span> VisionAuto. Всички права запазени.
+          Изградено за безопасност на пътя.
+        </p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a href="#" aria-label="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="viber://chat?number=+359878915118" aria-label="Viber"
+            ><i class="fa-brands fa-viber"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+      // Set dynamic current year in footer
+      document.getElementById("year-copy").textContent =
+        new Date().getFullYear();
+
+      // Sticky Navbar Effect on Scroll
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      // Intersection Observer for Scroll Animations (Revealing elements)
+      const revealElements = document.querySelectorAll(".reveal");
+
+      const revealOptions = {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const revealOnScroll = new IntersectionObserver(function (
+        entries,
+        observer,
+      ) {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          } else {
+            entry.target.classList.add("active");
+            observer.unobserve(entry.target); // Stop observing once it's visible
+          }
+        });
+      }, revealOptions);
+
+      revealElements.forEach((el) => {
+        revealOnScroll.observe(el);
+      });
+    </script>
+  </body>
+</html>
