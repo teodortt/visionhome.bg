@@ -97,6 +97,15 @@
       }
     </script>
 
+    <!-- Page Speed Optimizations: Preconnect & Preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.unsplash.com/photo-1485291571150-772bcfc10da5?q=80&w=1920&auto=format&fit=crop"
+    />
+
     <!-- Fonts & Icons -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap"
@@ -105,7 +114,14 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      media="print"
+      onload="this.media = 'all'"
     />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    /></noscript>
 
     <!-- Custom Styles -->
     <style>
@@ -143,7 +159,7 @@
         list-style: none;
       }
 
-      /* Typography */
+      /* Typography & Overflow Protection */
       h1,
       h2,
       h3,
@@ -151,7 +167,27 @@
         font-weight: 800;
         text-transform: uppercase;
         letter-spacing: 1px;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
       }
+
+      /* Fluid Typography */
+      h1 {
+        font-size: clamp(2.2rem, 8vw, 3.5rem);
+        margin-bottom: 20px;
+        line-height: 1.2;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+      }
+      h2 {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+        line-height: 1.3;
+      }
+      h3 {
+        font-size: clamp(1.3rem, 5vw, 2rem);
+        line-height: 1.4;
+      }
+
       .accent {
         color: var(--primary-color);
       }
@@ -177,7 +213,7 @@
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
       }
       .logo {
-        font-size: 28px;
+        font-size: clamp(20px, 4vw, 28px);
         font-weight: 800;
         letter-spacing: 2px;
       }
@@ -191,6 +227,7 @@
         display: flex;
         align-items: center;
         gap: 10px;
+        white-space: nowrap;
       }
       .nav-contact:hover {
         background: var(--primary-color);
@@ -231,9 +268,10 @@
         position: relative;
         z-index: 2;
         max-width: 900px;
+        width: 100%;
       }
       .hero-subtitle {
-        font-size: 14px;
+        font-size: clamp(12px, 3vw, 14px);
         letter-spacing: 4px;
         color: var(--primary-color);
         margin-bottom: 20px;
@@ -241,14 +279,8 @@
         text-transform: uppercase;
         font-weight: 600;
       }
-      .hero h1 {
-        font-size: 3.5rem;
-        margin-bottom: 20px;
-        line-height: 1.2;
-        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-      }
       .hero p {
-        font-size: 1.1rem;
+        font-size: clamp(1rem, 3vw, 1.1rem);
         color: var(--text-muted);
         margin-bottom: 40px;
       }
@@ -267,6 +299,7 @@
         transition: var(--transition);
         cursor: pointer;
         border: 2px solid transparent;
+        text-align: center;
       }
       .btn-primary {
         background-color: var(--primary-color);
@@ -293,6 +326,7 @@
       /* General Section Styles */
       section {
         padding: 100px 20px;
+        overflow: hidden;
       }
       .bg-alternate {
         background-color: var(--section-bg);
@@ -300,13 +334,13 @@
       .container {
         max-width: 1200px;
         margin: 0 auto;
+        width: 100%;
       }
       .section-header {
         text-align: center;
         margin-bottom: 60px;
       }
       .section-header h2 {
-        font-size: 2.5rem;
         margin-top: 10px;
       }
       .section-header span {
@@ -367,7 +401,7 @@
       .service-card h3 {
         font-size: 1.3rem;
         margin-bottom: 15px;
-      }
+      } /* Fixed smaller size for grid layout */
       .service-card ul {
         color: var(--text-muted);
         margin-top: 15px;
@@ -399,7 +433,6 @@
         flex: 1;
       }
       .led-content h2 {
-        font-size: 2.2rem;
         margin-bottom: 20px;
       }
       .led-content p {
@@ -433,18 +466,18 @@
       .led-visual {
         flex: 1;
         position: relative;
+        width: 100%;
       }
       .led-image-box {
         background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
         border: 1px solid rgba(249, 109, 0, 0.2);
         border-radius: 20px;
-        padding: 40px;
+        padding: 40px 20px;
         text-align: center;
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
         position: relative;
         overflow: hidden;
       }
-      /* Decorative glow for LED visual */
       .led-image-box::before {
         content: "";
         position: absolute;
@@ -469,7 +502,7 @@
         }
       }
       .led-image-box i {
-        font-size: 80px;
+        font-size: clamp(50px, 8vw, 80px);
         color: #fff;
         position: relative;
         z-index: 2;
@@ -479,9 +512,8 @@
       /* Process Steps */
       .process-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 40px;
-        counter-reset: process-counter;
       }
       .step-card {
         text-align: center;
@@ -504,7 +536,6 @@
         z-index: 2;
       }
       .step-card h3 {
-        font-size: 1.2rem;
         margin-bottom: 15px;
       }
       .step-card p {
@@ -512,7 +543,6 @@
         font-size: 0.95rem;
       }
 
-      /* Connecting Line for process (Desktop only) */
       @media (min-width: 992px) {
         .step-card:not(:last-child)::after {
           content: "";
@@ -526,7 +556,7 @@
         }
       }
 
-      /* Importance Section */
+      /* Importance Section (Responsive fixes applied here) */
       .info-content {
         background:
           url("https://www.transparenttextures.com/patterns/carbon-fibre.png"),
@@ -536,9 +566,9 @@
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
         text-align: center;
         border: 1px solid rgba(255, 255, 255, 0.05);
+        width: 100%;
       }
       .info-content h3 {
-        font-size: 2rem;
         margin-bottom: 20px;
       }
       .info-content p {
@@ -590,14 +620,16 @@
         opacity: 1;
         transform: translateY(0);
       }
-      .delay-1 {
-        transition-delay: 0.2s;
-      }
-      .delay-2 {
-        transition-delay: 0.4s;
-      }
-      .delay-3 {
-        transition-delay: 0.6s;
+      @media (min-width: 768px) {
+        .delay-1 {
+          transition-delay: 0.15s;
+        }
+        .delay-2 {
+          transition-delay: 0.3s;
+        }
+        .delay-3 {
+          transition-delay: 0.45s;
+        }
       }
 
       /* Responsive Design */
@@ -609,13 +641,19 @@
         .led-features {
           text-align: left;
         }
+        section {
+          padding: 70px 15px;
+        }
       }
       @media (max-width: 768px) {
-        .hero h1 {
-          font-size: 2.2rem;
-        }
         .navbar {
-          padding: 15px 20px;
+          padding: 15px;
+        }
+        .nav-contact {
+          padding: 8px 15px;
+        }
+        .nav-contact span {
+          display: none;
         }
         .btn-outline {
           margin-left: 0;
@@ -631,13 +669,11 @@
           display: flex;
           flex-direction: column;
           gap: 10px;
+          width: 100%;
         }
         .info-content {
-          padding: 30px 20px;
-        }
-        .nav-contact span {
-          display: none;
-        }
+          padding: 40px 15px;
+        } /* Reduced padding for mobile to prevent text squeeze */
         .led-features {
           grid-template-columns: 1fr;
         }
@@ -655,7 +691,7 @@
         class="nav-contact"
         aria-label="Обадете се сега"
       >
-        <i class="fa-solid fa-phone"></i>
+        <i class="fa-solid fa-phone" aria-hidden="true"></i>
         <span>+359 878 915 118</span>
       </a>
     </header>
@@ -677,13 +713,18 @@
             <a href="tel:+359878915118" class="btn btn-primary"
               ><i
                 class="fa-solid fa-calendar-check"
+                aria-hidden="true"
                 style="margin-right: 8px"
               ></i>
               Запази час</a
             >
             <a href="viber://chat?number=+359878915118" class="btn btn-outline"
-              ><i class="fa-brands fa-viber" style="margin-right: 8px"></i> Пиши
-              във Viber</a
+              ><i
+                class="fa-brands fa-viber"
+                aria-hidden="true"
+                style="margin-right: 8px"
+              ></i>
+              Пиши във Viber</a
             >
           </div>
         </div>
@@ -699,16 +740,23 @@
         <div class="services-grid">
           <!-- Card 1 -->
           <div class="service-card reveal">
-            <div class="service-icon"><i class="fa-solid fa-recycle"></i></div>
+            <div class="service-icon">
+              <i class="fa-solid fa-recycle" aria-hidden="true"></i>
+            </div>
             <h3>Рециклиране</h3>
             <p>Пълно обновяване на вашите светлини.</p>
             <ul>
               <li>
-                <i class="fa-solid fa-check"></i> Почистване на рефлектори
+                <i class="fa-solid fa-check" aria-hidden="true"></i> Почистване
+                на рефлектори
               </li>
-              <li><i class="fa-solid fa-check"></i> Подмяна на уплътнения</li>
               <li>
-                <i class="fa-solid fa-check"></i> Премахване на вътрешен прах
+                <i class="fa-solid fa-check" aria-hidden="true"></i> Подмяна на
+                уплътнения
+              </li>
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i> Премахване
+                на вътрешен прах
               </li>
             </ul>
           </div>
@@ -716,19 +764,22 @@
           <!-- Card 2 -->
           <div class="service-card reveal delay-1">
             <div class="service-icon">
-              <i class="fa-solid fa-screwdriver-wrench"></i>
+              <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
             </div>
             <h3>Механичен Ремонт</h3>
             <p>Отстраняване на структурни дефекти.</p>
             <ul>
               <li>
-                <i class="fa-solid fa-check"></i> Запояване на счупени уши
+                <i class="fa-solid fa-check" aria-hidden="true"></i> Запояване
+                на счупени уши
               </li>
               <li>
-                <i class="fa-solid fa-check"></i> Справяне със запотяване/влага
+                <i class="fa-solid fa-check" aria-hidden="true"></i> Справяне
+                със запотяване/влага
               </li>
               <li>
-                <i class="fa-solid fa-check"></i> Възстановяване на корпуси
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                Възстановяване на корпуси
               </li>
             </ul>
           </div>
@@ -736,46 +787,55 @@
           <!-- Card 3 -->
           <div class="service-card reveal delay-2">
             <div class="service-icon">
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
             </div>
             <h3>Полиране & Защита</h3>
             <p>Кристална чистота и UV защита.</p>
             <ul>
-              <li><i class="fa-solid fa-check"></i> Многостъпково шлайфане</li>
               <li>
-                <i class="fa-solid fa-check"></i> Премахване на пожълтяване
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                Многостъпково шлайфане
               </li>
               <li>
-                <i class="fa-solid fa-check"></i> Защитно фолио / Керамика
+                <i class="fa-solid fa-check" aria-hidden="true"></i> Премахване
+                на пожълтяване
+              </li>
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i> Защитно
+                фолио / Керамика
               </li>
             </ul>
           </div>
 
-          <!-- Card 4 (NEW: LED Repair) -->
+          <!-- Card 4 -->
           <div
             class="service-card reveal delay-3"
             style="border-color: rgba(249, 109, 0, 0.4)"
           >
             <div class="service-icon">
-              <i class="fa-solid fa-microchip"></i>
+              <i class="fa-solid fa-microchip" aria-hidden="true"></i>
             </div>
             <h3>LED & DRL Ремонт</h3>
             <p>Ремонт на фабрична електроника.</p>
             <ul>
-              <li><i class="fa-solid fa-check"></i> Смяна на изгорели диоди</li>
               <li>
-                <i class="fa-solid fa-check"></i> Ремонт на платки и драйвери
+                <i class="fa-solid fa-check" aria-hidden="true"></i> Смяна на
+                изгорели диоди
               </li>
               <li>
-                <i class="fa-solid fa-check"></i> Възстановяване на дневни
-                светлини
+                <i class="fa-solid fa-check" aria-hidden="true"></i> Ремонт на
+                платки и драйвери
+              </li>
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                Възстановяване на дневни светлини
               </li>
             </ul>
           </div>
         </div>
       </section>
 
-      <!-- NEW: Dedicated LED Section -->
+      <!-- LED Section -->
       <section class="bg-alternate">
         <div class="container led-section">
           <div class="led-content reveal">
@@ -799,7 +859,7 @@
 
             <div class="led-features">
               <div class="led-feature">
-                <i class="fa-solid fa-piggy-bank"></i>
+                <i class="fa-solid fa-piggy-bank" aria-hidden="true"></i>
                 <div>
                   <h4>Спестявате пари</h4>
                   <span style="font-size: 12px; color: var(--text-muted)"
@@ -808,7 +868,7 @@
                 </div>
               </div>
               <div class="led-feature">
-                <i class="fa-solid fa-award"></i>
+                <i class="fa-solid fa-award" aria-hidden="true"></i>
                 <div>
                   <h4>OEM Качество</h4>
                   <span style="font-size: 12px; color: var(--text-muted)"
@@ -820,7 +880,7 @@
           </div>
           <div class="led-visual reveal delay-1">
             <div class="led-image-box">
-              <i class="fa-regular fa-lightbulb"></i>
+              <i class="fa-regular fa-lightbulb" aria-hidden="true"></i>
               <h3 style="margin-top: 20px; letter-spacing: 2px">
                 LED DIAGNOSTICS
               </h3>
@@ -838,7 +898,7 @@
         </div>
       </section>
 
-      <!-- NEW: How We Work Section -->
+      <!-- Process Section -->
       <section class="container">
         <div class="section-header reveal">
           <span>Стъпка по стъпка</span>
@@ -914,14 +974,18 @@
           Изградено за безопасност на пътя.
         </p>
         <div class="social-icons">
-          <a href="#" aria-label="Facebook"
-            ><i class="fa-brands fa-facebook-f"></i
+          <a
+            href="https://www.facebook.com/visionhomebg"
+            aria-label="Разгледайте нашата Facebook страница"
+            ><i class="fa-brands fa-facebook-f" aria-hidden="true"></i
           ></a>
-          <a href="#" aria-label="Instagram"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-          <a href="viber://chat?number=+359878915118" aria-label="Viber"
-            ><i class="fa-brands fa-viber"></i
+          <!-- <a href="#" aria-label="Разгледайте нашия Instagram профил"
+            ><i class="fa-brands fa-instagram" aria-hidden="true"></i
+          ></a> -->
+          <a
+            href="viber://chat?number=+359878915118"
+            aria-label="Свържете се с нас по Viber"
+            ><i class="fa-brands fa-viber" aria-hidden="true"></i
           ></a>
         </div>
       </div>
@@ -935,17 +999,18 @@
 
       // Sticky Navbar
       const navbar = document.getElementById("navbar");
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) navbar.classList.add("scrolled");
-        else navbar.classList.remove("scrolled");
-      });
+      window.addEventListener(
+        "scroll",
+        () => {
+          if (window.scrollY > 50) navbar.classList.add("scrolled");
+          else navbar.classList.remove("scrolled");
+        },
+        { passive: true },
+      ); // passive: true подобрява scroll performance
 
       // Scroll Animations (Intersection Observer)
       const revealElements = document.querySelectorAll(".reveal");
-      const revealOptions = {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px",
-      };
+      const revealOptions = { threshold: 0.1, rootMargin: "0px 0px -30px 0px" };
 
       const revealOnScroll = new IntersectionObserver(function (
         entries,
