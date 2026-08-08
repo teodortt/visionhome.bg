@@ -16,7 +16,7 @@ VisionAuto е нашето специализирано звено за авто
 - LED и DRL ремонт (диагностика, микро-запояване и смяна на изгорели диоди на фабрични светлини)
 
 ## Полезни връзки
-- [VisionHome - Услуги за дома (Начална страница)](https://visionhome.bg/)
-- [VisionAuto - Ремонт на фарове](https://visionhome.bg/auto)
+- [VisionHome - Услуги за дома (Начална страница)](https://www.visionhome.bg/)
+- [VisionAuto - Ремонт на фарове](https://www.visionhome.bg/auto)
 - [Обадете ни се: +359 878 915 118](tel:+359878915118)
 - [Пишете ни във Viber](viber://chat?number=+359878915118)
