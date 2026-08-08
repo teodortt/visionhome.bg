@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.visionhome.bg/</loc></url>
-  <url><loc>https://www.visionhome.bg/about.html</loc></url>
-  <url><loc>https://www.visionhome.bg/uslugi.html</loc></url>
-  <url><loc>https://www.visionhome.bg/contact.html</loc></url>
-  <url><loc>https://www.visionhome.bg/auto.html</loc></url>
+  <url><loc>https://www.visionhome.bg/about</loc></url>
+  <url><loc>https://www.visionhome.bg/uslugi</loc></url>
+  <url><loc>https://www.visionhome.bg/contact</loc></url>
+  <url><loc>https://www.visionhome.bg/auto</loc></url>
 </urlset>
