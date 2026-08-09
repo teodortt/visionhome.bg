@@ -98,9 +98,22 @@
     </script>
 
     <!-- Page Speed Optimizations: Preconnect & Preload -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <!-- Preload Montserrat directly to break CSS→font chain (Cloudflare serves it from same origin) -->
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      href="https://www.visionhome.bg/cf-fonts/v/montserrat/5.2.8/latin/wght/normal.woff2"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      href="https://www.visionhome.bg/cf-fonts/v/montserrat/5.2.8/cyrillic/wght/normal.woff2"
+    />
     <link
       rel="preload"
       as="image"
@@ -674,7 +687,7 @@
         font-family: "Font Awesome 6 Free";
         font-style: normal;
         font-weight: 900;
-        font-display: swap;
+        font-display: optional;
         src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2")
           format("woff2");
       }
@@ -682,7 +695,7 @@
         font-family: "Font Awesome 6 Free";
         font-style: normal;
         font-weight: 400;
-        font-display: swap;
+        font-display: optional;
         src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-regular-400.woff2")
           format("woff2");
       }
@@ -690,7 +703,7 @@
         font-family: "Font Awesome 6 Brands";
         font-style: normal;
         font-weight: 400;
-        font-display: swap;
+        font-display: optional;
         src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2")
           format("woff2");
       }
