@@ -22,7 +22,10 @@
       property="og:url"
       content="https://www.visionhome.bg/privacy-policy"
     />
-    <meta property="og:image" content="https://www.visionhome.bg/images/logo.png" />
+    <meta
+      property="og:image"
+      content="https://www.visionhome.bg/images/logo.png"
+    />
 
     <meta charset="utf-8" />
     <meta
@@ -183,8 +186,7 @@
           <div class="col-md-9 ftco-animate pb-5">
             <p class="breadcrumbs mb-2">
               <span class="mr-2"
-                ><a href="/"
-                  >Начало <i class="ion-ios-arrow-forward"></i></a
+                ><a href="/">Начало <i class="ion-ios-arrow-forward"></i></a
               ></span>
               <span
                 >Политика за поверителност <i class="ion-ios-arrow-forward"></i
@@ -506,13 +508,19 @@
 
           <div class="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5">
             <h2 class="footer-heading text-footer">Свържи се с нас</h2>
-            <form id="contactForm" class="contact-form">
+            <form
+              id="contactForm"
+              class="contact-form"
+              toolname="submitContactRequest"
+              tooldescription="Send a contact enquiry to VisionHome. Fill in your name, email address, and message."
+            >
               <div class="form-group">
                 <input
                   name="name"
                   type="text"
                   class="form-control"
                   placeholder="Вашето име"
+                  toolparamdescription="The sender's full name."
                   required
                 />
               </div>
@@ -522,6 +530,7 @@
                   type="email"
                   class="form-control"
                   placeholder="Имейл"
+                  toolparamdescription="The sender's email address."
                   required
                 />
               </div>
@@ -532,6 +541,7 @@
                   rows="3"
                   class="form-control"
                   placeholder="Вашето запитване"
+                  toolparamdescription="The enquiry message to send to VisionHome."
                   required
                 ></textarea>
               </div>
