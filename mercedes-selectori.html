@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- 1. ULTIMATE SEO META TAGS -->
+    <title>Ремонт на Селектори и ISM Модули Mercedes | VisionAuto София</title>
+    <meta
+      name="description"
+      content="Блокирал скоростен лост на Mercedes? Грешка P1856? Професионален ремонт на електронни селектори (ESM) и ISM модули в София. Спестете от SCN кодиране и нови части."
+    />
+    <meta
+      name="keywords"
+      content="ремонт на селектор мерцедес, ремонт ism модул mercedes, скоростен лост мерцедес блокира, не излиза от P, грешка P1856, грешка P240C, 7G-tronic проблем скорости, esm mercedes repair, софия"
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+    <meta name="author" content="VisionAuto" />
+    <link rel="canonical" href="https://www.visionhome.bg/mercedes-selectors" />
+
+    <!-- 2. OPEN GRAPH & TWITTER (SOCIAL SEO) -->
+    <meta
+      property="og:title"
+      content="Ремонт на Селектори и ISM Модули за Mercedes | VisionAuto"
+    />
+    <meta
+      property="og:description"
+      content="Експертно решение при блокирал скоростен лост (ESM) и дефектирал ISM модул (7G-Tronic). Ремонт с гаранция без нужда от части втора употреба."
+    />
+    <meta property="og:image" content="./images/gear.webp" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="bg_BG" />
+    <meta
+      property="og:url"
+      content="https://www.visionhome.bg/mercedes-selectors"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- 3. ADVANCED SCHEMA.ORG -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AutoRepair",
+        "@id": "https://www.visionhome.bg/mercedes-selectors#business",
+        "url": "https://www.visionhome.bg/mercedes-selectors",
+        "name": "VisionAuto - Специализирана Автоелектроника Mercedes",
+        "image": "./images/gear.webp",
+        "description": "Специализиран хардуерен ремонт на електронни селектори (ESM) и ISM модули за Mercedes-Benz. Отключване от позиция 'P', възстановяване на платки, микроспояване.",
+        "telephone": "+359878915118",
+        "priceRange": "$$",
+        "currenciesAccepted": "BGN",
+        "paymentAccepted": "Cash, Credit Card",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "84"
+        },
+        "areaServed": { "@type": "City", "name": "София" },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "София",
+          "addressRegion": "Sofia-city",
+          "addressCountry": "BG"
+        }
+      }
+    </script>
+
+    <!-- 4. PERFORMANCE (LCP & Web Vitals) -->
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      href="./fonts/montserrat/montserrat-latin.woff2"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      href="./fonts/montserrat/montserrat-cyrillic.woff2"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./images/gear.webp"
+      fetchpriority="high"
+    />
+
+    <style>
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 300 800;
+        font-display: swap;
+        src: url("./fonts/montserrat/montserrat-cyrillic.woff2") format("woff2");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 300 800;
+        font-display: swap;
+        src: url("./fonts/montserrat/montserrat-latin.woff2") format("woff2");
+        unicode-range:
+          U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+          U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      :root {
+        --primary-color: #e53935; /* Сменено на техническо/alert червено вместо неоново оранжево */
+        --primary-hover: #d32f2f;
+        --dark-bg: #0d0d0d;
+        --section-bg: #141414;
+        --card-bg: #1a1a1a;
+        --text-light: #f4f4f4;
+        --text-muted: #9e9e9e;
+        --border-color: rgba(255, 255, 255, 0.08);
+        --transition: all 0.3s ease;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: var(--dark-bg);
+        color: var(--text-light);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      ul {
+        list-style: none;
+      }
+
+      /* Typography */
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      h1 {
+        font-size: clamp(2rem, 6vw, 3.2rem);
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+      h2 {
+        font-size: clamp(1.6rem, 5vw, 2.2rem);
+        line-height: 1.3;
+      }
+      h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        color: #fff;
+      }
+      .accent {
+        color: var(--primary-color);
+      }
+
+      /* Navbar */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        transition: var(--transition);
+        background: transparent;
+      }
+      .navbar.scrolled {
+        background: rgba(13, 13, 13, 0.98);
+        border-bottom: 1px solid var(--border-color);
+        padding: 15px 50px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+      }
+      .logo {
+        font-size: 24px;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+      }
+      .nav-contact {
+        background: rgba(155, 155, 155, 0.8);
+        border: 1px solid var(--border-color);
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-weight: 600;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: var(--transition);
+      }
+      .nav-contact:hover {
+        background: var(--primary-color);
+        border-color: var(--primary-color);
+      }
+
+      /* Hero */
+      .hero {
+        position: relative;
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+        background-image: url("./images/gear.webp");
+        background-position: center 30%;
+        background-size: cover;
+        padding: 120px 5% 0;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          rgba(13, 13, 13, 0.95) 0%,
+          rgba(13, 13, 13, 0.7) 50%,
+          rgba(0, 0, 0, 0.1) 100%
+        );
+        z-index: 1;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 650px;
+      }
+      .hero-subtitle {
+        font-size: 12px;
+        letter-spacing: 3px;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+        display: inline-block;
+        font-weight: 700;
+        background: rgba(229, 57, 53, 0.1);
+        padding: 5px 12px;
+        border-radius: 3px;
+      }
+      .hero p {
+        font-size: 1.1rem;
+        color: #ccc;
+        margin-bottom: 40px;
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 30px;
+        font-size: 14px;
+        font-weight: 700;
+        border-radius: 4px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: var(--transition);
+      }
+      .btn-primary {
+        background-color: var(--primary-color);
+        color: #fff;
+      }
+      .btn-primary:hover {
+        background-color: var(--primary-hover);
+      }
+      .btn-outline {
+        background-color: transparent;
+        border-color: #fff;
+        color: #fff;
+        margin-left: 15px;
+      }
+      .btn-outline:hover {
+        background-color: #fff;
+        color: #000;
+      }
+
+      /* Sections & Grid */
+      section {
+        padding: 90px 5%;
+      }
+      .bg-alternate {
+        background-color: var(--section-bg);
+        border-top: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .section-header {
+        margin-bottom: 50px;
+      }
+      .section-header.center {
+        text-align: center;
+      }
+      .section-header span {
+        color: var(--primary-color);
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 2px;
+      }
+
+      /* Technical Cards (Replaced cosmetic hover effects with solid tech borders) */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+      }
+      .tech-card {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        padding: 35px 25px;
+        position: relative;
+        border-left: 3px solid transparent;
+        transition: var(--transition);
+      }
+      .tech-card:hover {
+        border-left-color: var(--primary-color);
+        background: #1f1f1f;
+        transform: translateY(-5px);
+      }
+      .tech-icon {
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.05);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        color: var(--primary-color);
+      }
+      .tech-card p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+      }
+      .tech-list li {
+        font-size: 13px;
+        color: #ddd;
+        padding: 6px 0;
+        display: flex;
+        align-items: flex-start;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+      }
+      .tech-list li:last-child {
+        border-bottom: none;
+      }
+      .tech-list .fa-icon {
+        width: 12px;
+        color: var(--primary-color);
+        margin-right: 10px;
+        margin-top: 4px;
+        flex-shrink: 0;
+      }
+
+      /* Problem vs Solution Split */
+      .split-section {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+      }
+      .split-text {
+        flex: 1;
+      }
+      .split-text p {
+        color: var(--text-muted);
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+      .split-visual {
+        flex: 1;
+      }
+
+      .alert-box {
+        background: rgba(229, 57, 53, 0.05);
+        border: 1px solid rgba(229, 57, 53, 0.3);
+        padding: 30px;
+        border-radius: 6px;
+        position: relative;
+      }
+      .alert-box h4 {
+        color: var(--primary-color);
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .alert-box ul li {
+        margin-bottom: 12px;
+        color: #ddd;
+        font-size: 0.95rem;
+        padding-left: 20px;
+        position: relative;
+      }
+      .alert-box ul li::before {
+        content: "✕";
+        position: absolute;
+        left: 0;
+        color: var(--primary-color);
+        font-weight: bold;
+      }
+
+      .success-box {
+        background: rgba(76, 175, 80, 0.05);
+        border: 1px solid rgba(76, 175, 80, 0.3);
+        padding: 30px;
+        border-radius: 6px;
+        margin-top: 20px;
+      }
+      .success-box h4 {
+        color: #4caf50;
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .success-box ul li {
+        margin-bottom: 12px;
+        color: #ddd;
+        font-size: 0.95rem;
+        padding-left: 20px;
+        position: relative;
+      }
+      .success-box ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #4caf50;
+        font-weight: bold;
+      }
+
+      /* Steps */
+      .process-wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+      .step {
+        flex: 1;
+        min-width: 250px;
+        background: var(--section-bg);
+        padding: 30px;
+        border: 1px solid var(--border-color);
+        position: relative;
+      }
+      .step-num {
+        font-size: 3rem;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.05);
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        line-height: 1;
+      }
+      .step h3 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .step p {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+      }
+
+      /* FAQ */
+      .faq-item {
+        border-bottom: 1px solid var(--border-color);
+      }
+      .faq-item summary {
+        padding: 20px 0;
+        font-weight: 600;
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: color 0.3s;
+      }
+      .faq-item summary:hover {
+        color: var(--primary-color);
+      }
+      .faq-item summary::-webkit-details-marker {
+        display: none;
+      }
+      .faq-item p {
+        padding-bottom: 20px;
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        line-height: 1.7;
+      }
+
+      /* Icons standard */
+      .fa-icon {
+        height: 1em;
+        width: auto;
+        fill: currentColor;
+      }
+
+      /* Responsive */
+      @media (max-width: 992px) {
+        .split-section {
+          flex-direction: column;
+        }
+        .hero {
+          justify-content: center;
+          text-align: center;
+          padding-top: 140px;
+        }
+        .hero::before {
+          background: rgba(13, 13, 13, 0.85);
+        }
+        .btn-outline {
+          margin-left: 0;
+          margin-top: 15px;
+        }
+        .hero-btns {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      @media (max-width: 768px) {
+        .navbar {
+          padding: 15px 5%;
+        }
+        .nav-contact span {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="navbar" id="navbar">
+      <a href="/" class="logo">VISION<span class="accent">AUTO</span></a>
+      <a href="tel:+359878915118" class="nav-contact">
+        <svg class="fa-icon" viewBox="0 0 512 512">
+          <path
+            d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
+          />
+        </svg>
+        <span>+359 878 915 118</span>
+      </a>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-content">
+          <span class="hero-subtitle">Специализиран сервиз за електроника</span>
+          <h1>
+            Проблем със селектора на <span class="accent">Mercedes</span>?
+          </h1>
+          <p>
+            Автомобилът е блокирал на "P"? Не разпознава предавките или влиза в
+            авариен режим? Извършваме експертен
+            <strong>хардуерен ремонт на ESM и ISM модули</strong>. Решаваме
+            проблема радикално, без нужда от закупуване на скъпи части втора
+            употреба и препрограмиране.
+          </p>
+          <div class="hero-btns">
+            <a href="tel:+359878915118" class="btn btn-primary">Консултация</a>
+            <!-- <a href="#problem-vs-solution" class="btn btn-outline"
+              >Защо да изберете ремонт?</a
+            > -->
+          </div>
+        </div>
+      </section>
+
+      <!-- SYMPTOMS & SERVICES GRID -->
+      <section class="container" id="services">
+        <div class="section-header">
+          <span>Диагностика и решения</span>
+          <h2>Симптоми и Услуги</h2>
+        </div>
+        <div class="services-grid">
+          <!-- Card 1 -->
+          <article class="tech-card">
+            <div class="tech-icon">
+              <!-- Shift / Gear Icon -->
+              <svg class="fa-icon" style="width: 24px" viewBox="0 0 512 512">
+                <path
+                  d="M352 320c-22.6 0-41.9 13.6-49.9 32.7L221.7 312c1.5-5.1 2.3-10.4 2.3-16s-.8-10.9-2.3-16l80.4-40.7c8 19.1 27.3 32.7 49.9 32.7c26.5 0 48-21.5 48-48s-21.5-48-48-48c-22.6 0-41.9 13.6-49.9 32.7L221.7 216c-1.5-5.1-2.3-10.4-2.3-16s.8-10.9 2.3-16l80.4-40.7c8 19.1 27.3 32.7 49.9 32.7c26.5 0 48-21.5 48-48s-21.5-48-48-48c-35.3 0-64 28.7-64 64c0 6.6 1 12.9 2.9 18.8L209.4 204c-8.7-25.9-33.6-44-62.1-44c-35.3 0-64 28.7-64 64s28.7 64 64 64c28.5 0 53.4-18.1 62.1-44l81.5 41.2c-1.9 5.9-2.9 12.2-2.9 18.8c0 35.3 28.7 64 64 64c26.5 0 48-21.5 48-48s-21.5-48-48-48z"
+                />
+              </svg>
+            </div>
+            <h3>Блокирал ESM Селектор</h3>
+            <p>
+              Лостът отказва да излезе от позиция Parking, липсва индикация на
+              таблото или колата не пали.
+            </p>
+            <ul class="tech-list">
+              <li>Отключване от позиция "P"</li>
+              <li>Смяна на дефектирали оптрони</li>
+              <li>Възстановяване на платката (PCB)</li>
+            </ul>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="tech-card">
+            <div class="tech-icon">
+              <!-- Chip Icon -->
+              <svg class="fa-icon" style="width: 24px" viewBox="0 0 512 512">
+                <path
+                  d="M256 0c17.7 0 32 14.3 32 32V66.7C368.4 80.1 431.9 143.6 445.3 224H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H445.3C431.9 368.4 368.4 431.9 288 445.3V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V445.3C143.6 431.9 80.1 368.4 66.7 288H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H66.7C80.1 143.6 143.6 80.1 224 66.7V32c0-17.7 14.3-32 32-32zM128 256a128 128 0 1 0 256 0 128 128 0 1 0 -256 0zm128-80a80 80 0 1 1 0 160 80 80 0 1 1 0-160z"
+                />
+              </svg>
+            </div>
+            <h3>ISM Модул (7G-Tronic)</h3>
+            <p>
+              Съобщение "Drive to workshop without changing gear". Невъзможност
+              за смяна на предавките.
+            </p>
+            <ul class="tech-list">
+              <li>Хардуерен ремонт на самия модул</li>
+              <li>Запазване на оригиналната кодировка</li>
+              <li>Спестяване от скъпо SCN програмиране</li>
+            </ul>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="tech-card">
+            <div class="tech-icon">
+              <!-- Diagnostics Icon -->
+              <svg class="fa-icon" style="width: 24px" viewBox="0 0 640 512">
+                <path
+                  d="M128 32C92.7 32 64 60.7 64 96V352h64V96H512V352h64V96c0-35.3-28.7-64-64-64H128zM19.2 384C8.6 384 0 392.6 0 403.2C0 445.6 34.4 480 76.8 480H563.2c42.4 0 76.8-34.4 76.8-76.8c0-10.6-8.6-19.2-19.2-19.2H19.2z"
+                />
+              </svg>
+            </div>
+            <h3>Специфични Грешки</h3>
+            <p>
+              Четене и локализиране на точния проблем със специализиран дилърски
+              софтуер.
+            </p>
+            <ul class="tech-list">
+              <li>P1856 - Селекторът е дефектен</li>
+              <li>P240C - Нелогичен сигнал от CAN</li>
+              <li>P2725 - Вътрешна електронна грешка</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- PROBLEM VS SOLUTION SECTION -->
+      <section class="bg-alternate" id="problem-vs-solution">
+        <div class="container split-section">
+          <div class="split-text">
+            <h2>Втора употреба или <span class="accent">Ремонт</span>?</h2>
+            <p>
+              Когато селекторът дефектира, първият съвет по форумите често е:
+              <em>"Вземи си от морга"</em>.
+              <strong>Това е сериозна техническа и финансова грешка.</strong>
+            </p>
+            <p>
+              Електронните селектори и ISM модулите при Mercedes са част от
+              имобилайзерната система (FBS3/FBS4 защита против кражба). Вие не
+              можете просто да "прехвърлите" модул от друга кола.
+            </p>
+          </div>
+
+          <div class="split-visual">
+            <!-- Alert Box -->
+            <div class="alert-box">
+              <h4>Част втора употреба (Морга)</h4>
+              <ul>
+                <li>
+                  Носи <strong>същия фабричен дефект</strong> (стари и износени
+                  оптрони/платки). Въпрос на време е да ви остави на пътя
+                  отново.
+                </li>
+                <li>
+                  Изисква сложно и скъпо <strong>"Върджинизиране"</strong>.
+                </li>
+                <li>
+                  Изисква онлайн <strong>SCN кодиране</strong> чрез дилърски
+                  достъп, за да може колата изобщо да запали.
+                </li>
+              </ul>
+            </div>
+            <!-- Success Box -->
+            <div class="success-box">
+              <h4>Ремонт във VisionAuto (Нашето решение)</h4>
+              <ul>
+                <li>
+                  Отстраняваме корена на проблема – подменяме дефектиралите
+                  компоненти с <strong>нови от по-висок клас</strong>.
+                </li>
+                <li>
+                  <strong>Вашият оригинален софтуер</strong> се запазва – няма
+                  нужда от SCN кодиране и адаптации. Включвате и карате.
+                </li>
+                <li>
+                  Получавате <strong>гаранция</strong> за извършения хардуерен
+                  ремонт.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section class="container">
+        <div class="section-header center">
+          <span>Работен процес</span>
+          <h2>Как протича ремонтът?</h2>
+        </div>
+        <div class="process-wrap">
+          <div class="step">
+            <span class="step-num">01</span>
+            <h3>Диагностика</h3>
+            <p>
+              Закачаме автомобила (или четем модула на стенд), за да потвърдим
+              електронния дефект и конкретните кодове за грешки (P1856, P240C и
+              др.).
+            </p>
+          </div>
+          <div class="step">
+            <span class="step-num">02</span>
+            <h3>Микроспояване</h3>
+            <p>
+              Разглобяваме модула. Платката се почиства, а дефектиралите оптични
+              сензори и елементи се подменят чрез прецизно микроспояване.
+            </p>
+          </div>
+          <div class="step">
+            <span class="step-num">03</span>
+            <h3>Тест и Монтаж</h3>
+            <p>
+              Сглобяваме механизма, проверяваме живите данни (отчитане на P, R,
+              N, D без забавяне) и монтираме обратно в автомобила.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="bg-alternate" id="faq">
+        <div class="container">
+          <div class="section-header">
+            <h2>Често задавани въпроси</h2>
+          </div>
+          <div style="max-width: 800px">
+            <details class="faq-item">
+              <summary>
+                Колата ми е блокирана пред блока. Какво да направя?
+              </summary>
+              <p>
+                Обадете ни се за консултация. Ако лостът не излиза от "P", можем
+                да ви обясним процедурата за аварийно освобождаване (при някои
+                модели се бърка с химикал или отвертка под маншона), за да може
+                колата да се качи на репатрак или да се докара до сервиза. Ако
+                желаете, може ваш доверен механик да демонтира модула и да ни го
+                донесете.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>Колко време отнема хардуерният ремонт?</summary>
+              <p>
+                Ако ни донесете свален селектор или ISM модул, самият електронен
+                ремонт се извършва в рамките на
+                <strong>1 до 2 работни дни</strong>. Ако автомобилът се докара
+                при нас за цялостна услуга (демонтаж, ремонт, монтаж), времето
+                се уточнява при приемане.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>За кои модели Mercedes предлагате тази услуга?</summary>
+              <p>
+                Ремонтираме ESM селектори за E-class (W211), C-class (W203),
+                S-class (W220), SL (R230), ML (W163). Също така извършваме
+                ремонт на ISM модули (7G-Tronic) за ML/GL (W164, X164, W166),
+                S-class (W221), E-class (W212/W207) и други модели, страдащи от
+                този фабричен дефект.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>Има ли гаранция на ремонта?</summary>
+              <p>
+                Да. Ние не "закрепяме" положението, а подменяме проблемните
+                електронни компоненти с чисто нови. Всеки успешно ремонтиран
+                модул получава гаранция.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section style="text-align: center">
+        <div class="container">
+          <h2 style="margin-bottom: 20px">
+            Имате нужда от съдействие веднага?
+          </h2>
+          <p style="color: var(--text-muted); margin-bottom: 30px">
+            Спестете си излишни нерви и хиляди левове за нови модули. Свържете
+            се с нас за професионална консултация и трайно решение.
+          </p>
+          <a href="tel:+359878915118" class="btn btn-primary"
+            >Обадете се на +359 878 915 118</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      style="
+        background: #000;
+        padding: 40px 5%;
+        border-top: 1px solid var(--border-color);
+        text-align: center;
+      "
+    >
+      <div class="container">
+        <div class="logo" style="margin-bottom: 15px">
+          VISION<span class="accent">AUTO</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 14px">
+          &copy; <span id="year-copy"></span> VisionAuto - Експертен ремонт на
+          автоелектроника, селектори и ISM модули за Mercedes-Benz в София.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year-copy").textContent =
+        new Date().getFullYear();
+      const navbar = document.getElementById("navbar");
+
+      window.addEventListener(
+        "scroll",
+        () => {
+          if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+          } else {
+            navbar.classList.remove("scrolled");
+          }
+        },
+        { passive: true },
+      );
+    </script>
+  </body>
+</html>
