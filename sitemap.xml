@@ -12,6 +12,12 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+    <url>
+    <loc>https://www.visionhome.bg/mercedes-selectori</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
   <url>
     <loc>https://www.visionhome.bg/uslugi</loc>
     <lastmod>2026-08-09</lastmod>
