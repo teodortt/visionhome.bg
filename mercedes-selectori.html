@@ -115,8 +115,8 @@
       }
 
       :root {
-        --primary-color: #e53935; /* Сменено на техническо/alert червено вместо неоново оранжево */
-        --primary-hover: #d32f2f;
+        --primary-color: #d32f2f;
+        --primary-hover: #b71c1c;
         --dark-bg: #0d0d0d;
         --section-bg: #141414;
         --card-bg: #1a1a1a;
@@ -255,7 +255,7 @@
         margin-bottom: 15px;
         display: inline-block;
         font-weight: 700;
-        background: rgba(229, 57, 53, 0.1);
+        background: rgba(211, 47, 47, 0.15);
         padding: 5px 12px;
         border-radius: 3px;
       }
@@ -324,7 +324,7 @@
         letter-spacing: 2px;
       }
 
-      /* Technical Cards (Replaced cosmetic hover effects with solid tech borders) */
+      /* Technical Cards */
       .services-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -398,13 +398,13 @@
       }
 
       .alert-box {
-        background: rgba(229, 57, 53, 0.05);
-        border: 1px solid rgba(229, 57, 53, 0.3);
+        background: rgba(211, 47, 47, 0.05);
+        border: 1px solid rgba(211, 47, 47, 0.3);
         padding: 30px;
         border-radius: 6px;
         position: relative;
       }
-      .alert-box h4 {
+      .alert-box h3 {
         color: var(--primary-color);
         margin-bottom: 15px;
         font-size: 1.2rem;
@@ -434,7 +434,7 @@
         border-radius: 6px;
         margin-top: 20px;
       }
-      .success-box h4 {
+      .success-box h3 {
         color: #4caf50;
         margin-bottom: 15px;
         font-size: 1.2rem;
@@ -475,7 +475,7 @@
       .step-num {
         font-size: 3rem;
         font-weight: 900;
-        color: rgba(255, 255, 255, 0.05);
+        color: rgba(255, 255, 255, 0.3);
         position: absolute;
         top: 10px;
         right: 20px;
@@ -560,8 +560,12 @@
     <!-- HEADER -->
     <header class="navbar" id="navbar">
       <a href="/" class="logo">VISION<span class="accent">AUTO</span></a>
-      <a href="tel:+359878915118" class="nav-contact">
-        <svg class="fa-icon" viewBox="0 0 512 512">
+      <a
+        href="tel:+359878915118"
+        class="nav-contact"
+        aria-label="Обадете се на +359 878 915 118"
+      >
+        <svg class="fa-icon" viewBox="0 0 512 512" aria-hidden="true">
           <path
             d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
           />
@@ -587,9 +591,6 @@
           </p>
           <div class="hero-btns">
             <a href="tel:+359878915118" class="btn btn-primary">Консултация</a>
-            <!-- <a href="#problem-vs-solution" class="btn btn-outline"
-              >Защо да изберете ремонт?</a
-            > -->
           </div>
         </div>
       </section>
@@ -604,8 +605,12 @@
           <!-- Card 1 -->
           <article class="tech-card">
             <div class="tech-icon">
-              <!-- Shift / Gear Icon -->
-              <svg class="fa-icon" style="width: 24px" viewBox="0 0 512 512">
+              <svg
+                class="fa-icon"
+                style="width: 24px"
+                viewBox="0 0 512 512"
+                aria-hidden="true"
+              >
                 <path
                   d="M352 320c-22.6 0-41.9 13.6-49.9 32.7L221.7 312c1.5-5.1 2.3-10.4 2.3-16s-.8-10.9-2.3-16l80.4-40.7c8 19.1 27.3 32.7 49.9 32.7c26.5 0 48-21.5 48-48s-21.5-48-48-48c-22.6 0-41.9 13.6-49.9 32.7L221.7 216c-1.5-5.1-2.3-10.4-2.3-16s.8-10.9 2.3-16l80.4-40.7c8 19.1 27.3 32.7 49.9 32.7c26.5 0 48-21.5 48-48s-21.5-48-48-48c-35.3 0-64 28.7-64 64c0 6.6 1 12.9 2.9 18.8L209.4 204c-8.7-25.9-33.6-44-62.1-44c-35.3 0-64 28.7-64 64s28.7 64 64 64c28.5 0 53.4-18.1 62.1-44l81.5 41.2c-1.9 5.9-2.9 12.2-2.9 18.8c0 35.3 28.7 64 64 64c26.5 0 48-21.5 48-48s-21.5-48-48-48z"
                 />
@@ -626,8 +631,12 @@
           <!-- Card 2 -->
           <article class="tech-card">
             <div class="tech-icon">
-              <!-- Chip Icon -->
-              <svg class="fa-icon" style="width: 24px" viewBox="0 0 512 512">
+              <svg
+                class="fa-icon"
+                style="width: 24px"
+                viewBox="0 0 512 512"
+                aria-hidden="true"
+              >
                 <path
                   d="M256 0c17.7 0 32 14.3 32 32V66.7C368.4 80.1 431.9 143.6 445.3 224H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H445.3C431.9 368.4 368.4 431.9 288 445.3V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V445.3C143.6 431.9 80.1 368.4 66.7 288H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H66.7C80.1 143.6 143.6 80.1 224 66.7V32c0-17.7 14.3-32 32-32zM128 256a128 128 0 1 0 256 0 128 128 0 1 0 -256 0zm128-80a80 80 0 1 1 0 160 80 80 0 1 1 0-160z"
                 />
@@ -648,8 +657,12 @@
           <!-- Card 3 -->
           <article class="tech-card">
             <div class="tech-icon">
-              <!-- Diagnostics Icon -->
-              <svg class="fa-icon" style="width: 24px" viewBox="0 0 640 512">
+              <svg
+                class="fa-icon"
+                style="width: 24px"
+                viewBox="0 0 640 512"
+                aria-hidden="true"
+              >
                 <path
                   d="M128 32C92.7 32 64 60.7 64 96V352h64V96H512V352h64V96c0-35.3-28.7-64-64-64H128zM19.2 384C8.6 384 0 392.6 0 403.2C0 445.6 34.4 480 76.8 480H563.2c42.4 0 76.8-34.4 76.8-76.8c0-10.6-8.6-19.2-19.2-19.2H19.2z"
                 />
@@ -689,7 +702,7 @@
           <div class="split-visual">
             <!-- Alert Box -->
             <div class="alert-box">
-              <h4>Част втора употреба (Морга)</h4>
+              <h3>Част втора употреба</h3>
               <ul>
                 <li>
                   Носи <strong>същия фабричен дефект</strong> (стари и износени
@@ -707,7 +720,7 @@
             </div>
             <!-- Success Box -->
             <div class="success-box">
-              <h4>Нашето решение</h4>
+              <h3>Нашето решение</h3>
               <ul>
                 <li>
                   Отстраняваме корена на проблема – подменяме дефектиралите
@@ -735,7 +748,7 @@
         </div>
         <div class="process-wrap">
           <div class="step">
-            <span class="step-num">01</span>
+            <span class="step-num" aria-hidden="true">01</span>
             <h3>Диагностика</h3>
             <p>
               Закачаме автомобила (или четем модула на стенд), за да потвърдим
@@ -744,7 +757,7 @@
             </p>
           </div>
           <div class="step">
-            <span class="step-num">02</span>
+            <span class="step-num" aria-hidden="true">02</span>
             <h3>Микроспояване</h3>
             <p>
               Разглобяваме модула. Платката се почиства, а дефектиралите оптични
@@ -752,7 +765,7 @@
             </p>
           </div>
           <div class="step">
-            <span class="step-num">03</span>
+            <span class="step-num" aria-hidden="true">03</span>
             <h3>Тест и Монтаж</h3>
             <p>
               Сглобяваме механизма, проверяваме живите данни (отчитане на P, R,
