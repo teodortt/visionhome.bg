@@ -533,6 +533,34 @@
         flex-shrink: 0;
       }
 
+      /* Work gallery */
+      .work-gallery {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+      }
+      .work-gallery figure {
+        margin: 0;
+        aspect-ratio: 4 / 3;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        background: #101010;
+      }
+      .work-gallery img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition:
+          transform 0.5s ease,
+          opacity 0.5s ease;
+      }
+      .work-gallery figure:hover img {
+        opacity: 0.9;
+        transform: scale(1.04);
+      }
+
       /* LED Section */
       .led-section {
         display: flex;
@@ -788,6 +816,10 @@
         }
         .led-features {
           grid-template-columns: 1fr;
+        }
+        .work-gallery {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 12px;
         }
       }
 
@@ -1199,6 +1231,148 @@
               </li>
             </ul>
           </article>
+        </div>
+      </section>
+
+      <!-- WORK GALLERY -->
+      <section class="bg-alternate" aria-labelledby="work-gallery-title">
+        <div class="container">
+          <div class="section-header reveal">
+            <span>Нашата работа</span>
+            <h2 id="work-gallery-title">
+              Галерия от <span class="accent">извършени ремонти</span>
+            </h2>
+          </div>
+          <div class="work-gallery">
+            <figure class="reveal">
+              <img
+                src="./images/auto/stop-1.webp"
+                alt="Ремонтиран автомобилен стоп - детайл 1"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure class="reveal delay-1">
+              <img
+                src="./images/auto/stop-2.webp"
+                alt="Ремонтиран автомобилен стоп - детайл 2"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure class="reveal delay-2">
+              <img
+                src="./images/auto/stop-3.webp"
+                alt="Ремонтиран автомобилен стоп - детайл 3"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure class="reveal delay-3">
+              <img
+                src="./images/auto/stop-4.webp"
+                alt="Ремонтиран автомобилен стоп - детайл 4"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure class="reveal">
+              <img
+                src="./images/auto/stop-5.webp"
+                alt="Ремонтиран автомобилен стоп - детайл 5"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure class="reveal delay-1">
+              <img
+                src="./images/auto/stop-6.webp"
+                alt="Ремонтиран автомобилен стоп - детайл 6"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure class="reveal delay-2">
+              <img
+                src="./images/auto/stop-9.webp"
+                alt="Ремонтиран автомобилен стоп - детайл 9"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure class="reveal delay-3">
+              <img
+                src="./images/auto/stop-10.webp"
+                alt="Ремонтиран автомобилен стоп - детайл 10"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure class="reveal">
+              <img
+                src="./images/auto/stop-7.webp"
+                alt="Ремонтиран автомобилен стоп - детайл 7"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure class="reveal delay-1">
+              <img
+                src="./images/auto/stop-8.webp"
+                alt="Ремонтиран автомобилен стоп - детайл 8"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure class="reveal delay-2">
+              <img
+                src="./images/auto/far-1.webp"
+                alt="Ремонтиран автомобилен фар - детайл 1"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure class="reveal delay-3">
+              <img
+                src="./images/auto/far-3.webp"
+                alt="Ремонтиран автомобилен фар - детайл 2"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure class="reveal">
+              <img
+                src="./images/auto/far-4.webp"
+                alt="Ремонтиран автомобилен фар - детайл 3"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure class="reveal delay-1">
+              <img
+                src="./images/auto/far-5.webp"
+                alt="Ремонтиран автомобилен фар - детайл 4"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure class="reveal delay-2">
+              <img
+                src="./images/auto/far-6.webp"
+                alt="Ремонтиран автомобилен фар - детайл 5"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure class="reveal delay-3">
+              <img
+                src="./images/auto/far2.webp"
+                alt="Възстановен автомобилен фар"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          </div>
         </div>
       </section>
 
