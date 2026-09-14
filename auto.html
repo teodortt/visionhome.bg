@@ -546,6 +546,11 @@
         border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 12px;
         background: #101010;
+        cursor: zoom-in;
+      }
+      .work-gallery figure:focus-visible {
+        outline: 2px solid var(--primary-color);
+        outline-offset: 4px;
       }
       .work-gallery img {
         display: block;
@@ -559,6 +564,44 @@
       .work-gallery figure:hover img {
         opacity: 0.9;
         transform: scale(1.04);
+      }
+      .lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 2000;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        background: rgba(0, 0, 0, 0.9);
+      }
+      .lightbox[hidden] {
+        display: none;
+      }
+      .lightbox img {
+        display: block;
+        max-width: min(1200px, 96vw);
+        max-height: 90vh;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        border-radius: 8px;
+      }
+      .lightbox-close {
+        position: absolute;
+        top: 18px;
+        right: 24px;
+        width: 44px;
+        height: 44px;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.45);
+        color: #fff;
+        font-size: 30px;
+        line-height: 1;
+        cursor: pointer;
+      }
+      body.lightbox-open {
+        overflow: hidden;
       }
 
       /* LED Section */
@@ -1669,6 +1712,24 @@
       </div>
     </footer>
 
+    <div
+      class="lightbox"
+      id="gallery-lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Уголемена снимка"
+      hidden
+    >
+      <button
+        class="lightbox-close"
+        type="button"
+        aria-label="Затвори снимката"
+      >
+        &times;
+      </button>
+      <img src="" alt="" />
+    </div>
+
     <script>
       document.getElementById("year-copy").textContent =
         new Date().getFullYear();
@@ -1689,6 +1750,46 @@
         { passive: true },
       );
 
+      const lightbox = document.getElementById("gallery-lightbox");
+      const lightboxImage = lightbox.querySelector("img");
+      const lightboxClose = lightbox.querySelector(".lightbox-close");
+      const galleryFigures = document.querySelectorAll(".work-gallery figure");
+
+      const closeLightbox = () => {
+        lightbox.hidden = true;
+        lightboxImage.removeAttribute("src");
+        document.body.classList.remove("lightbox-open");
+      };
+
+      const openLightbox = (figure) => {
+        const image = figure.querySelector("img");
+        lightboxImage.src = image.currentSrc || image.src;
+        lightboxImage.alt = image.alt;
+        lightbox.hidden = false;
+        document.body.classList.add("lightbox-open");
+        lightboxClose.focus();
+      };
+
+      galleryFigures.forEach((figure) => {
+        figure.tabIndex = 0;
+        figure.setAttribute("role", "button");
+        figure.setAttribute("aria-label", "Уголеми снимката");
+        figure.addEventListener("click", () => openLightbox(figure));
+        figure.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openLightbox(figure);
+          }
+        });
+      });
+
+      lightboxClose.addEventListener("click", closeLightbox);
+      lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) closeLightbox();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !lightbox.hidden) closeLightbox();
+      });
       const revealElements = document.querySelectorAll(".reveal");
       const revealOptions = { threshold: 0.1, rootMargin: "0px 0px -30px 0px" };
       const revealOnScroll = new IntersectionObserver(function (
