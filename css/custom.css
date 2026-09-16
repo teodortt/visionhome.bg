@@ -26,7 +26,9 @@
   position: relative;
   font-weight: 600;
   letter-spacing: 0.25px;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.85), 0 2px 4px rgba(0, 0, 0, 0.7),
+  text-shadow:
+    0 0 2px rgba(0, 0, 0, 0.85),
+    0 2px 4px rgba(0, 0, 0, 0.7),
     0 0 10px rgba(0, 0, 0, 0.55);
   -webkit-text-stroke: 0.4px rgba(0, 0, 0, 0.45);
   z-index: 1;
@@ -41,8 +43,42 @@
   color: #ffffff !important;
 }
 
+.slider-text .hero-heading {
+  display: flex;
+  flex-direction: column;
+}
+
+.slider-text .hero-heading h1 {
+  order: 2;
+}
+
+.slider-text .hero-heading h2 {
+  order: 1;
+}
+
+.slider-text .hero-brand {
+  color: #fff;
+  font-size: 80px;
+  font-weight: 800;
+  letter-spacing: 7px;
+  line-height: 1;
+  text-shadow: 0 3px 25px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+}
+
+.services .media-body p {
+  color: #595959;
+}
+
+.services .media-body h2 {
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+}
+
 .submitBtn {
-  border-color: #0d6efd;
+  background-color: #0759c7 !important;
+  border-color: #0759c7 !important;
   color: #fff !important;
   font-weight: 600;
   letter-spacing: 0.2px;
@@ -55,4 +91,11 @@
 
 .viber-icon:hover img {
   filter: brightness(0) invert(1);
+}
+
+@media (max-width: 767.98px) {
+  .slider-text .hero-brand {
+    font-size: 40px;
+    letter-spacing: 3px;
+  }
 }

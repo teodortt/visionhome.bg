@@ -60,9 +60,11 @@
 				],
 				responsive: { 0: { items: 1 }, 600: { items: 1 }, 1000: { items: 1 } }
 			});
+		patchHomeA11y();
 
 		function patchHomeA11y() {
 			var $wrap = $('.home-slider');
+			$wrap.find('.owl-item.cloned').attr('aria-hidden', 'true');
 			var $prev = $wrap.find('.owl-prev');
 			var $next = $wrap.find('.owl-next');
 			if ($prev.length) $prev.attr({ 'aria-label': 'Предишен слайд', 'type': 'button' }).removeAttr('role');
@@ -211,38 +213,32 @@
 	counter();
 
 	var contentWayPoint = function () {
-		var i = 0;
-		$('.ftco-animate').waypoint(function (direction) {
+		var observer = new IntersectionObserver(function (entries) {
+			var visible = entries.filter(function (entry) {
+				return entry.isIntersecting && !$(entry.target).hasClass('ftco-animated');
+			});
 
-			if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
-
-				i++;
-
-				$(this.element).addClass('item-animate');
+			visible.forEach(function (entry, index) {
+				observer.unobserve(entry.target);
 				setTimeout(function () {
+					var el = $(entry.target);
+					var effect = el.data('animate-effect');
+					if (effect === 'fadeIn') {
+						el.addClass('fadeIn ftco-animated');
+					} else if (effect === 'fadeInLeft') {
+						el.addClass('fadeInLeft ftco-animated');
+					} else if (effect === 'fadeInRight') {
+						el.addClass('fadeInRight ftco-animated');
+					} else {
+						el.addClass('fadeInUp ftco-animated');
+					}
+				}, 100 + index * 50);
+			});
+		}, { rootMargin: '0px 0px -5% 0px' });
 
-					$('body .ftco-animate.item-animate').each(function (k) {
-						var el = $(this);
-						setTimeout(function () {
-							var effect = el.data('animate-effect');
-							if (effect === 'fadeIn') {
-								el.addClass('fadeIn ftco-animated');
-							} else if (effect === 'fadeInLeft') {
-								el.addClass('fadeInLeft ftco-animated');
-							} else if (effect === 'fadeInRight') {
-								el.addClass('fadeInRight ftco-animated');
-							} else {
-								el.addClass('fadeInUp ftco-animated');
-							}
-							el.removeClass('item-animate');
-						}, k * 50, 'easeInOutExpo');
-					});
-
-				}, 100);
-
-			}
-
-		}, { offset: '95%' });
+		$('.ftco-animate').each(function () {
+			observer.observe(this);
+		});
 	};
 	contentWayPoint();
 
