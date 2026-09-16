@@ -1,6 +1,7 @@
 <!doctype html>
-<html lang="en">
+<html lang="bg">
   <head>
+    <meta charset="utf-8" />
     <title>
       VisionHome – Електроинсталации, Видеонаблюдение, Монтаж и Ремонти | София
     </title>
@@ -13,6 +14,19 @@
       content="електроинсталации София, видеонаблюдение, монтаж камери, поддръжка видеонаблюдение, електро услуги, ВиК, ремонт, VisionHome"
     />
     <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+    <meta name="author" content="VisionHome" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <meta name="format-detection" content="telephone=yes" />
+
+    <!-- OPEN GRAPH & TWITTER -->
+    <meta
       property="og:title"
       content="VisionHome – Електроинсталации и Видеонаблюдение | София"
     />
@@ -20,56 +34,137 @@
       property="og:description"
       content="Експертни електро услуги и системи за видеонаблюдение. Проектиране, монтаж и поддръжка на сигурност. Качествени ВиК и довършителни работи."
     />
+    <meta property="og:site_name" content="VisionHome" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="bg_BG" />
-
     <meta property="og:url" content="https://www.visionhome.bg/" />
     <meta
       property="og:image"
-      content="https://www.visionhome.bg/images/logo.png"
+      content="https://www.visionhome.bg/images/bg_1_n.webp"
     />
-
-    <meta charset="utf-8" />
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      property="og:image:alt"
+      content="VisionHome – електроинсталации, ВиК и монтажи в София"
+    />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="1600" />
+    <meta property="og:image:height" content="883" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@visionhomebg" />
+    <meta
+      name="twitter:title"
+      content="VisionHome – Електроинсталации и Видеонаблюдение | София"
+    />
+    <meta
+      name="twitter:description"
+      content="Електроинсталации и видеонаблюдение в София. Проектиране, монтаж, поддръжка. Качествени ВиК и довършителни работи."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.visionhome.bg/images/bg_1_n.webp"
     />
 
-    <!-- CSS -->
+    <!-- CRITICAL CSS (inline @font-face + theme) -->
     <style>
       @font-face {
         font-family: "icomoon";
         src: url("fonts/icomoon/icomoon.woff?6tt51o") format("woff");
         font-weight: normal;
         font-style: normal;
-        font-display: block;
+        font-display: swap;
       }
     </style>
-    <!-- CSS -->
 
     <link rel="canonical" href="https://www.visionhome.bg/" />
+
+    <!-- PRE-CONNECTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://stackpath.bootstrapcdn.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="//stackpath.bootstrapcdn.com" />
+
+    <!-- LCP IMAGE – discoverable & prioritized from the start -->
     <link
-      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      as="image"
+      fetchpriority="high"
+      href="images/bg_1_n.webp"
     />
 
+    <!-- FONTS -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <!-- CRITICAL LAYOUT CSS (render-blocking: above-the-fold structure) -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <!-- NON-CRITICAL CSS (async – do not block first paint) -->
+    <link
+      rel="stylesheet"
+      href="css/animate.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="css/owl.theme.default.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="css/magnific-popup.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="css/ionicons.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="css/flaticon.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="css/icomoon.css"
+      media="print"
+      onload="this.media='all'"
+    />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      media="print"
+      onload="this.media='all'"
     />
-
-    <link rel="stylesheet" href="css/animate.css" />
-
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="css/magnific-popup.css" />
-
-    <link rel="stylesheet" href="css/ionicons.min.css" />
-
-    <link rel="stylesheet" href="css/flaticon.css" />
-    <link rel="stylesheet" href="css/icomoon.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/custom.css" />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
+      />
+      <link rel="stylesheet" href="css/animate.css" />
+      <link rel="stylesheet" href="css/owl.carousel.min.css" />
+      <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+      <link rel="stylesheet" href="css/magnific-popup.css" />
+      <link rel="stylesheet" href="css/ionicons.min.css" />
+      <link rel="stylesheet" href="css/flaticon.css" />
+      <link rel="stylesheet" href="css/icomoon.css" />
+      <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+    </noscript>
     <link
       rel="icon"
       type="image/png"
@@ -145,10 +240,12 @@
         </button>
         <a href="/">
           <img
-            src="images/logo.png"
+            src="images/logo.webp"
             alt="VisionHome – лого"
-            height="80"
-            style="width: auto"
+            width="617"
+            height="404"
+            style="height: 80px; width: auto"
+            decoding="async"
           />
         </a>
         <div class="collapse navbar-collapse" id="ftco-nav">
@@ -1164,6 +1261,8 @@
                         <img
                           src="images/viber.svg"
                           alt="Viber"
+                          width="22"
+                          height="22"
                           style="width: 22px; margin-top: -4px"
                         />
                       </span>
@@ -1364,19 +1463,19 @@
       </svg>
     </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jquery-migrate-3.0.1.min.js" defer></script>
+    <script src="js/popper.min.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <script src="js/jquery.easing.1.3.js" defer></script>
+    <script src="js/jquery.waypoints.min.js" defer></script>
+    <script src="js/jquery.stellar.min.js" defer></script>
+    <script src="js/jquery.animateNumber.min.js" defer></script>
+    <script src="js/owl.carousel.min.js" defer></script>
+    <script src="js/jquery.magnific-popup.min.js" defer></script>
+    <script src="js/scrollax.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/custom.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -1404,7 +1503,7 @@
         "name": "VisionHome",
         "url": "https://www.visionhome.bg",
         "description": "Ел и ВиК инсталации, монтаж на оборудване, интериорни и довършителни работи.",
-        "image": "https://www.visionhome.bg/images/cover.webp",
+        "image": "https://www.visionhome.bg/images/bg_1_n.webp",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "ул. Кота 1050",
