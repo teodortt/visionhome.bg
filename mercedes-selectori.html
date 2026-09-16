@@ -22,7 +22,7 @@
       content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
     />
     <meta name="author" content="VisionAuto" />
-    <link rel="canonical" href="https://www.visionhome.bg/mercedes-selectors" />
+    <link rel="canonical" href="https://www.visionhome.bg/mercedes-selectori" />
 
     <!-- 2. OPEN GRAPH & TWITTER (SOCIAL SEO) -->
     <meta
@@ -33,24 +33,66 @@
       property="og:description"
       content="Експертно решение при блокирал скоростен лост (ESM), дефектирал ISM модул и проблем с BMW iDrive джойстик. Ремонт с гаранция без излишни компромиси."
     />
-    <meta property="og:image" content="./images/gear.webp" />
+    <meta property="og:site_name" content="VisionAuto" />
+    <meta
+      property="og:image"
+      content="https://www.visionhome.bg/images/gear.webp"
+    />
+    <meta
+      property="og:image:alt"
+      content="Ремонт на селектори Mercedes и BMW iDrive джойстици"
+    />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="1926" />
+    <meta property="og:image:height" content="1280" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="bg_BG" />
     <meta
       property="og:url"
-      content="https://www.visionhome.bg/mercedes-selectors"
+      content="https://www.visionhome.bg/mercedes-selectori"
     />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@visionhomebg" />
+    <meta
+      name="twitter:title"
+      content="Ремонт на Селектори Mercedes и BMW iDrive Конзоли | VisionAuto"
+    />
+    <meta
+      name="twitter:description"
+      content="Блокирал скоростен лост на Mercedes или превъртащ iDrive джойстик на BMW? Професионален хардуерен ремонт на ESM, ISM модули и iDrive конзоли с гаранция."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.visionhome.bg/images/gear.webp"
+    />
+
+    <!-- 2b. FAVICON & PWA ASSETS / THEME -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <meta name="theme-color" content="#0d0d0d" />
+    <meta name="format-detection" content="telephone=yes" />
 
     <!-- 3. ADVANCED SCHEMA.ORG -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "AutoRepair",
-        "@id": "https://www.visionhome.bg/mercedes-selectors#business",
-        "url": "https://www.visionhome.bg/mercedes-selectors",
+        "@id": "https://www.visionhome.bg/mercedes-selectori#business",
+        "url": "https://www.visionhome.bg/mercedes-selectori",
         "name": "VisionAuto - Специализирана Автоелектроника Mercedes и BMW",
-        "image": "./images/gear.webp",
+        "image": "https://www.visionhome.bg/images/gear.webp",
         "description": "Специализиран хардуерен ремонт на електронни селектори (ESM) и ISM модули за Mercedes-Benz, както и ремонт на BMW iDrive конзоли и джойстици.",
         "telephone": "+359878915118",
         "priceRange": "$$",
@@ -67,13 +109,92 @@
           "addressLocality": "София",
           "addressRegion": "Sofia-city",
           "addressCountry": "BG"
+        },
+        "sameAs": ["https://www.facebook.com/visionhomebg"],
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
         }
+      }
+    </script>
+
+    <!-- 3b. BREADCRUMB STRUCTURED DATA -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Начало",
+            "item": "https://www.visionhome.bg/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "VisionAuto - Автоуслуги",
+            "item": "https://www.visionhome.bg/auto"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Ремонт на селектори Mercedes и BMW iDrive",
+            "item": "https://www.visionhome.bg/mercedes-selectori"
+          }
+        ]
+      }
+    </script>
+
+    <!-- 3c. FAQ STRUCTURED DATA -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Колата ми е блокирана пред блока. Какво да направя?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Обадете ни се за консултация. Ако лостът на Mercedes-а не излиза от \"P\", можем да ви обясним процедурата за аварийно освобождаване, за да може колата да се качи на репатрак или да се докара до сервиза. Също така, може ваш доверен механик да демонтира модула и да ни го донесете."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ремонтирате ли iDrive джойстици на всички модели BMW?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да, извършваме хардуерен ремонт на iDrive контролери за повечето разпространени модели на BMW (E-серии, F-серии и G-серии), независимо дали става въпрос за CCC, CIC или NBT системи. Най-честият проблем с превъртането на празно се отстранява успешно."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Колко време отнема хардуерният ремонт?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ако ни донесете свален селектор, ISM модул или iDrive конзола, самият електронен ремонт се извършва в рамките на 1 до 2 работни дни. Ако автомобилът се докара при нас за цялостна услуга (демонтаж, ремонт, монтаж), времето се уточнява при приемане."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Има ли гаранция на ремонта?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да. Ние не \"закрепяме\" положението, а подменяме проблемните електронни компоненти с чисто нови. Всеки успешно ремонтиран модул получава гаранция за качество."
+            }
+          }
+        ]
       }
     </script>
 
     <!-- 4. PERFORMANCE (LCP & Web Vitals) -->
     <link rel="preconnect" href="https://images.unsplash.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="//images.unsplash.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
     <link
       rel="preload"
       as="font"
@@ -329,6 +450,36 @@
         font-weight: 700;
         font-size: 12px;
         letter-spacing: 2px;
+      }
+
+      /* Internal links menu */
+      .related-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+      .related-links a {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text-muted);
+        border: 1px solid var(--border-color);
+        padding: 8px 16px;
+        border-radius: 4px;
+        transition: var(--transition);
+      }
+      .related-links a:hover {
+        color: #fff;
+        border-color: var(--primary-color);
+        background: rgba(211, 47, 47, 0.15);
+      }
+
+      /* Hidden SEO text block */
+      .seo-text {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        line-height: 1.7;
       }
 
       /* Work gallery */
@@ -663,7 +814,7 @@
       </a>
     </header>
 
-    <main>
+    <main role="main">
       <!-- HERO -->
       <section class="hero">
         <div class="hero-content">
@@ -933,7 +1084,7 @@
             <figure>
               <img
                 src="./images/auto/selector-1.webp"
-                alt="Ремонтиран Mercedes селектор - детайл 1"
+                alt="Демонтиран Mercedes ESM селектор преди хардуерен ремонт - детайл от платката"
                 loading="lazy"
                 decoding="async"
               />
@@ -941,7 +1092,7 @@
             <figure>
               <img
                 src="./images/auto/selector-2.webp"
-                alt="Ремонтиран Mercedes селектор - детайл 2"
+                alt="Ремонтиран Mercedes селектор с възстановен оптрон на платката"
                 loading="lazy"
                 decoding="async"
               />
@@ -949,7 +1100,7 @@
             <figure>
               <img
                 src="./images/auto/selector-3.webp"
-                alt="Ремонтиран Mercedes селектор - детайл 3"
+                alt="Mercedes ISM модул 7G-Tronic след микроспояване и диагностика"
                 loading="lazy"
                 decoding="async"
               />
@@ -957,7 +1108,7 @@
             <figure>
               <img
                 src="./images/auto/selector-4.webp"
-                alt="Ремонтиран Mercedes селектор - детайл 4"
+                alt="Сглобен Mercedes скоростен лост след успешен ремонт на селектор"
                 loading="lazy"
                 decoding="async"
               />
@@ -965,7 +1116,7 @@
             <figure>
               <img
                 src="./images/auto/joystick-1.webp"
-                alt="Ремонтиран BMW iDrive джойстик - детайл 1"
+                alt="BMW iDrive джойстик с превъртащ енкодер преди ремонт"
                 loading="lazy"
                 decoding="async"
               />
@@ -973,7 +1124,7 @@
             <figure>
               <img
                 src="./images/auto/joystick-2.webp"
-                alt="Ремонтиран BMW iDrive джойстик - детайл 2"
+                alt="Ремонтиран BMW iDrive контролер с възстановени бутони и енкодер"
                 loading="lazy"
                 decoding="async"
               />
@@ -1085,6 +1236,23 @@
           >
         </div>
       </section>
+      <!-- HIDDEN SEO TEXT BLOCK -->
+      <section style="padding: 20px 0 60px">
+        <div class="container">
+          <p class="seo-text">
+            VisionAuto е специализиран сервиз за
+            <strong>ремонт на селектори Mercedes в София</strong> – за
+            <strong>блокирал скоростен лост</strong> и грешка P1856 предлагаме
+            хардуерен ремонт на ESM и <strong>ISM модули 7G-Tronic</strong> без
+            препрограмиране. Извършваме и
+            <strong>ремонт на BMW iDrive джойстици</strong> и конзоли, когато
+            контролерът превърта на празно или не реагира. Вашият оригинален
+            софтуер се запазва, а всеки ремонт включва гаранция. Ако имате нужда
+            от <strong>рециклиране на фарове</strong> и LED поправки,
+            разгледайте основните ни <strong>автоуслуги</strong>.
+          </p>
+        </div>
+      </section>
     </main>
 
     <!-- FOOTER -->
@@ -1100,10 +1268,21 @@
         <div class="logo" style="margin-bottom: 15px">
           VISION<span class="accent">AUTO</span>
         </div>
+        <nav class="related-links" aria-label="Полезна навигация">
+          <a href="/auto">Ремонт на фарове</a>
+          <a href="/uslugi">Услуги за дома</a>
+          <a href="/about">За нас</a>
+          <a href="/contact">Контакти</a>
+          <a href="/privacy-policy">Поверителност</a>
+        </nav>
         <p style="color: var(--text-muted); font-size: 14px">
           &copy; <span id="year-copy"></span> VisionAuto - Експертен ремонт на
           автоелектроника, селектори за Mercedes-Benz и iDrive конзоли за BMW в
           София.
+        </p>
+        <p style="color: var(--text-muted); font-size: 13px; margin-top: 10px">
+          Работно време: Понеделник – Петък, 09:00 – 18:00 | Тел:
+          <a href="tel:+359878915118" style="color: #fff">+359 878 915 118</a>
         </p>
       </div>
     </footer>
