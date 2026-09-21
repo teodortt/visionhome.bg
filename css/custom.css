@@ -5,6 +5,13 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
+/* owl.carousel.min.css loads after style.css and sets touch-action:none on
+   .owl-item, which blocks vertical touch scrolling over the hero slider */
+.owl-carousel.owl-drag .owl-item {
+  -ms-touch-action: pan-y !important;
+  touch-action: pan-y !important;
+}
+
 .bg-dim {
   position: relative;
 
