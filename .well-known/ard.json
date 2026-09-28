@@ -1,0 +1,18 @@
+{
+  "entries": [
+    {
+      "@context": "https://agenticresourcediscovery.org/context/v1",
+      "identifier": "urn:air:visionhome.bg:skill:service-guide",
+      "displayName": "VisionHome service guide",
+      "type": "application/ai-skill+md",
+      "url": "https://www.visionhome.bg/skills/visionhome-services/SKILL.md",
+      "description": "Guidance for answering questions about VisionHome home services and VisionAuto vehicle-light and selector repairs in Bulgaria.",
+      "capabilities": ["ServiceInformation", "ContactGuidance"],
+      "representativeQueries": [
+        "Какви услуги за ремонт на дома предлага VisionHome?",
+        "Къде мога да ремонтирам фарове и LED светлини в София?",
+        "Ремонтирате ли Mercedes селектори и BMW iDrive?"
+      ]
+    }
+  ]
+}
