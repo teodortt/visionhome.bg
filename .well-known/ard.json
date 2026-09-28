@@ -1,10 +1,11 @@
 {
+  "specVersion": "1.0",
   "entries": [
     {
       "@context": "https://agenticresourcediscovery.org/context/v1",
       "identifier": "urn:air:visionhome.bg:skill:service-guide",
       "displayName": "VisionHome service guide",
-      "type": "application/ai-skill+md",
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
       "url": "https://www.visionhome.bg/skills/visionhome-services/SKILL.md",
       "description": "Guidance for answering questions about VisionHome home services and VisionAuto vehicle-light and selector repairs in Bulgaria.",
       "capabilities": ["ServiceInformation", "ContactGuidance"],
