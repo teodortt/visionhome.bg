@@ -110,7 +110,7 @@
           "addressRegion": "Sofia-city",
           "addressCountry": "BG"
         },
-        "sameAs": ["https://www.facebook.com/visionhomebg"],
+        "sameAs": ["https://www.facebook.com/profile.php?id=61580491344089"],
         "openingHoursSpecification": {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -754,6 +754,29 @@
         width: auto;
         fill: currentColor;
       }
+      .footer-social {
+        margin-top: 18px;
+      }
+      .footer-social a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        color: #fff;
+        border: 1px solid var(--border-color);
+        transition:
+          color 0.3s,
+          border-color 0.3s;
+      }
+      .footer-social a:hover,
+      .footer-social a:focus-visible {
+        color: var(--primary-color);
+        border-color: var(--primary-color);
+      }
+      .footer-social .fa-icon {
+        height: 20px;
+      }
 
       /* Responsive */
       @media (max-width: 992px) {
@@ -1284,6 +1307,25 @@
           Работно време: Понеделник – Петък, 09:00 – 18:00 | Тел:
           <a href="tel:+359878915118" style="color: #fff">+359 878 915 118</a>
         </p>
+        <div class="footer-social">
+          <a
+            href="https://www.facebook.com/profile.php?id=61580491344089"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Разгледайте нашата Facebook страница"
+          >
+            <svg
+              class="fa-icon"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 320 512"
+            >
+              <path
+                d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
+              />
+            </svg>
+          </a>
+        </div>
       </div>
     </footer>
 
